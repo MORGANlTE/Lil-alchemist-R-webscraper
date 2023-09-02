@@ -17,21 +17,66 @@ class Scraper():
         return image_url
     
     def get_rarity_and_form(self, soup):
-        # Find the table containing the rarity and form information
-        tables = soup.find_all('table', class_='pi-horizontal-group')
+        # The table for the rarity and form information
+        tables_rarity_form = soup.find_all('table', class_='pi-horizontal-group')
 
-        descr = tables[0].find("td", attrs={'data-source': 'imagecaption'}).get_text(strip=True)
+        # Description
+        descr = tables_rarity_form[0].find("td", attrs={'data-source': 'imagecaption'}).get_text(strip=True)
 
-        base_attack = tables[1].find("td", attrs={'data-source': 'attack'}).get_text(strip=True)
-        base_defense = tables[1].find("td", attrs={'data-source': 'defense'}).get_text(strip=True)
-        base_power = tables[1].find("td", attrs={'data-source': 'rarity'}).text.strip()
+        # Base Attack
+        base_attack = tables_rarity_form[1].find("td", attrs={'data-source': 'attack'}).get_text(strip=True)
+        # Base Defense
+        base_defense = tables_rarity_form[1].find("td", attrs={'data-source': 'defense'}).get_text(strip=True)
+        # Base Power
+        base_power = tables_rarity_form[1].find("td", attrs={'data-source': 'rarity'}).text.strip()
 
-        rarity = tables[2].find("td", attrs={'data-source': 'rarity'}).text.strip()
-        form = tables[2].find("td", attrs={'data-source': 'form'}).text.strip()
+        # Rarity
+        rarity = tables_rarity_form[2].find("td", attrs={'data-source': 'rarity'}).text.strip()
+        # Form
+        form = tables_rarity_form[2].find("td", attrs={'data-source': 'form'}).text.strip()
 
+        # Fusion
         fusion = soup.find("div", class_="pi-item pi-data pi-item-spacing pi-border-color", attrs={'data-source': 'fusion'}).find("b").text.strip()
 
-        return descr, base_attack, base_defense, base_power, rarity, form, fusion
+        # Where to acquire
+        list_acquire = soup.find('div', class_='mw-parser-output').find('ul').find_all('li')
+        where_to_acquire = []
+        for elemnt in list_acquire:
+            where_to_acquire.append(elemnt.text.strip())
+
+
+        # The table with the level info
+        table_level_info = soup.find('table', class_='article-table')
+        print(table_level_info)
+
+        
+        # Initialize an empty dictionary to store the key-value pairs
+        level_stats = {}
+
+        # # Find all rows within the table except the header row
+        # rows = table_level_info.find_all('tr')[1:]
+
+        # # Loop through each row and extract the level and corresponding stats
+        # for row in rows:
+        #     columns = row.find_all('td')
+        #     if len(columns) == 3:
+        #         level = columns[0].find('img')['alt']  # Extract the level from the alt attribute of the img tag
+        #         attack = int(columns[1].get_text())    # Extract and convert the attack value to an integer
+        #         defense = int(columns[2].get_text())   # Extract and convert the defense value to an integer
+        #         level_stats[level] = {'Attack': attack, 'Defense': defense}
+
+        # # Print the key-value pairs
+        # for level, stats in level_stats.items():
+        #     print(f'Level: {level}')
+        #     print(f'Stats: {stats}')
+        #     print()
+
+
+        # print("-=-=-=-=-=-")
+        # print(level_stats)
+        # print("-=-=-=-=-=-")
+        
+        return descr, base_attack, base_defense, base_power, rarity, form, fusion, where_to_acquire
 
         
     def scrapedata(self, name):
@@ -40,7 +85,7 @@ class Scraper():
         resp = requests.get(url)
         soup = BeautifulSoup(resp.content, 'html.parser')
         imgurl = self.get_image(soup)
-        description, base_attack, base_defense, base_power, rarity, form, fusion = self.get_rarity_and_form(soup)
+        description, base_attack, base_defense, base_power, rarity, form, fusion, where_to_acquire = self.get_rarity_and_form(soup)
         
         print("\tImage URL:", imgurl)
         print(f"\tDescription: {description}")
@@ -50,6 +95,7 @@ class Scraper():
         print(f"\tRarity: {rarity}")
         print(f"\tForm: {form}")
         print(f"\tFusion: {fusion}")
+        print(f"\tWhere to acquire: {where_to_acquire}")
 
 
         return "Error"
@@ -59,7 +105,7 @@ class Scraper():
 scraper = Scraper()
 counter = 1
 
-for name in ["Chloe_(Card)"]:
+for name in ["Bear", "Chloe_(Card)"]:
   print(f"#{counter} {name}")
   response = scraper.scrapedata(name)
   #list_total.append(response)
