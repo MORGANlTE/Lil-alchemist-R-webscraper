@@ -47,36 +47,22 @@ class Scraper():
 
         # The table with the level info
         table_level_info = soup.find('table', class_='article-table')
-        print(table_level_info)
 
-        
         # Initialize an empty dictionary to store the key-value pairs
         level_stats = {}
 
         # # Find all rows within the table except the header row
-        # rows = table_level_info.find_all('tr')[1:]
+        rows = table_level_info.find_all('tr')[1:]
+        for row in rows:
+            # Extract the level, attack, and defense values
+            level_img = row.find('th').find('img')  # Find the img tag
+            level = level_img['alt']      # Extract the level from the alt attribute
+            tds = row.find_all('td')      # Find all td tags
+            attack = int(tds[0].text.strip())
+            defense = int(tds[1].text.strip())
+            level_stats[level] = {'Attack': attack, 'Defense': defense}
 
-        # # Loop through each row and extract the level and corresponding stats
-        # for row in rows:
-        #     columns = row.find_all('td')
-        #     if len(columns) == 3:
-        #         level = columns[0].find('img')['alt']  # Extract the level from the alt attribute of the img tag
-        #         attack = int(columns[1].get_text())    # Extract and convert the attack value to an integer
-        #         defense = int(columns[2].get_text())   # Extract and convert the defense value to an integer
-        #         level_stats[level] = {'Attack': attack, 'Defense': defense}
-
-        # # Print the key-value pairs
-        # for level, stats in level_stats.items():
-        #     print(f'Level: {level}')
-        #     print(f'Stats: {stats}')
-        #     print()
-
-
-        # print("-=-=-=-=-=-")
-        # print(level_stats)
-        # print("-=-=-=-=-=-")
-        
-        return descr, base_attack, base_defense, base_power, rarity, form, fusion, where_to_acquire
+        return descr, base_attack, base_defense, base_power, rarity, form, fusion, where_to_acquire, level_stats
 
         
     def scrapedata(self, name):
@@ -85,7 +71,7 @@ class Scraper():
         resp = requests.get(url)
         soup = BeautifulSoup(resp.content, 'html.parser')
         imgurl = self.get_image(soup)
-        description, base_attack, base_defense, base_power, rarity, form, fusion, where_to_acquire = self.get_rarity_and_form(soup)
+        description, base_attack, base_defense, base_power, rarity, form, fusion, where_to_acquire, level_stats = self.get_rarity_and_form(soup)
         
         print("\tImage URL:", imgurl)
         print(f"\tDescription: {description}")
@@ -96,6 +82,7 @@ class Scraper():
         print(f"\tForm: {form}")
         print(f"\tFusion: {fusion}")
         print(f"\tWhere to acquire: {where_to_acquire}")
+        print(f"\tStats per level: {level_stats}")
 
 
         return "Error"
@@ -105,7 +92,7 @@ class Scraper():
 scraper = Scraper()
 counter = 1
 
-for name in ["Bear", "Chloe_(Card)"]:
+for name in ["Bear"]:#"Chloe_(Card)"]:
   print(f"#{counter} {name}")
   response = scraper.scrapedata(name)
   #list_total.append(response)
