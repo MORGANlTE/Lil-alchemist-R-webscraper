@@ -16,7 +16,7 @@ class Scraper():
             image_url = None
         return image_url
     
-    def get_rarity_and_form(self, soup):
+    def get_rarity_and_form_etc(self, soup):
         # The table for the rarity and form information
         tables_rarity_form = soup.find_all('table', class_='pi-horizontal-group')
 
@@ -71,7 +71,7 @@ class Scraper():
         resp = requests.get(url)
         soup = BeautifulSoup(resp.content, 'html.parser')
         imgurl = self.get_image(soup)
-        description, base_attack, base_defense, base_power, rarity, form, fusion, where_to_acquire, level_stats = self.get_rarity_and_form(soup)
+        description, base_attack, base_defense, base_power, rarity, form, fusion, where_to_acquire, level_stats = self.get_rarity_and_form_etc(soup)
         
         print("\tImage URL:", imgurl)
         print(f"\tDescription: {description}")
@@ -93,12 +93,15 @@ scraper = Scraper()
 counter = 1
 
 for name in ["Bear"]:#"Chloe_(Card)"]:
-  print(f"#{counter} {name}")
-  response = scraper.scrapedata(name)
-  #list_total.append(response)
-  time.sleep(1)
+    print(f"#{counter} {name}")
+    try:
+        response = scraper.scrapedata(name)
+    except:
+        print(f"Error on card {name}")
+    #list_total.append(response)
+    time.sleep(1)
 
-  counter += 1
+    counter += 1
 
 #fl.write(str(list_total))
 #fl.close()
