@@ -5,6 +5,7 @@ import json
 from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker
 from db_classes import Card, Combination, Recipe, Base, CardLevelStats
+from cards import get_cards
 
 # Create a SQLite database engine
 engine = create_engine('sqlite:///card_database.db')
@@ -243,7 +244,7 @@ class Scraper():
                 # check if opposite combo exists in the database, in the combo table
                 opposite_combo = session.query(Combination).filter_by(card1=card2, card2=card1).first()
 
-                if not opposite_recipe:
+                if not opposite_combo:
                     combo = Combination(
                         card1=card1,
                         card2=card2,
@@ -260,8 +261,9 @@ class Scraper():
 scraper = Scraper()
 counter = 1
 
+# print(get_cards())
 
-for name in ["Chloe (Card)"]:
+for name in get_cards():
     print(f"#{counter} {name}")
     try:
         response = scraper.scrapedata(name)
