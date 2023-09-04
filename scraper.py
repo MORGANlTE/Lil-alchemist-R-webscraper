@@ -4,8 +4,9 @@ import time
 import json
 from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker
-from db_classes import Card, Combination, Recipe, Base, CardLevelStats
-from cards import get_cards
+from db_classes import CardPack, Card, Combination, Recipe, Base, CardLevelStats
+from data.cards import get_cards, get_packs
+
 
 # Create a SQLite database engine
 engine = create_engine('sqlite:///card_database.db')
@@ -15,8 +16,9 @@ inspector = inspect(engine)
 
 # Check if the "cards" table exists
 if not inspector.has_table("cards"):
-    # Create all tables in the engine. This is equivalent to "Create Table"
-    # statements in raw SQL.
+    Base.metadata.create_all(engine)
+
+if not inspector.has_table("card_packs"):
     Base.metadata.create_all(engine)
 
 
@@ -153,7 +155,7 @@ class Scraper():
 
         return type_card, url_name, real_name
 
-    def scrapedata(self, name):
+    def scrape_card_data(self, name):
 
         type_card, url_name, real_name = self.name_converter(name) 
 
@@ -258,30 +260,87 @@ class Scraper():
         print(f"Added {card.name} to database")
         return "Success"
 
+    def scrape_pack_data(self, pack_name):
+        url_name = pack_name.replace(" ", "_")
+        url = f'https://lil-alchemist.fandom.com/wiki/Special_Packs/{url_name}'
+        print("- " + url)
+        resp = requests.get(url)
+        soup = BeautifulSoup(resp.content, 'html.parser')
+        # print(soup)
+
+        table = soup.find_all('table', class_='pi-horizontal-group')[0]
+        
+        cost = table.find('td', {'data-source': 'cost'}).get_text(strip=True)
+        print(cost)
+
+        gallery = soup.find('div', id='gallery-0')
+        cardnames = []
+        cards = gallery.find_all('div', class_='lightbox-caption')
+        for card in cards:
+            cardnames.append(card.text.strip())
+
+        onyx_fragments_caption = soup.find('div', class_='lightbox-caption', text="Onyx Fragments")
+        
+        onyx = False
+
+        if onyx_fragments_caption:
+            onyx = True
+
+        cardpack = CardPack(
+            name=pack_name,
+            price=cost,
+            cards=json.dumps(cardnames),
+            onyx_fragments=onyx,
+        )
+
+        session.add(cardpack)
+        session.commit()
+
+
+        return "Succes"
+    
+
+
+
 scraper = Scraper()
 counter = 1
 
+# scraper for the cards: (uncomment to use)
 # print(get_cards())
+# for name in get_cards():
+#     print(f"#{counter} {name}")
+#     try:
+#         response = scraper.scrape_card_data(name)
+#     except Exception as e:
+#         print(f"Error on card {name}")
+#         print(e)
+#         # print where the error occurs
+#         import traceback
+#         traceback.print_exc()
+#     time.sleep(2)
+#     counter += 1
 
-for name in get_cards():
-    print(f"#{counter} {name}")
+
+
+# scraper for the packs: (uncomment to use)
+for pack in get_packs():
+    print(f"#{counter} {pack}")
     try:
-        response = scraper.scrapedata(name)
+        response = scraper.scrape_pack_data(pack)
     except Exception as e:
-        print(f"Error on card {name}")
+        print(f"Error on card {pack}")
         print(e)
         # print where the error occurs
         import traceback
         traceback.print_exc()
-    # Close the session
-    #list_total.append(response)
     time.sleep(2)
-
     counter += 1
+
+
+
+
+
+
+
+# Close the session
 session.close()
-
-#fl.write(str(list_total))
-#fl.close()
-
-
-

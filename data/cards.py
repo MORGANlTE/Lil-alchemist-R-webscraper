@@ -1,5 +1,5 @@
-from cardnames import cards
-
+from .cardnames import cards
+from .packnames import packs
 def get_cards():
   no_duplicates = {}
 
@@ -10,3 +10,7 @@ def get_cards():
   sorted_cards = sorted(no_duplicates)  
   
   return sorted_cards
+
+
+def get_packs():
+  return packs

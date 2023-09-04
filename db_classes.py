@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 import json
@@ -48,3 +48,15 @@ class Recipe(Base):
     card1 = Column(Integer, ForeignKey('cards.id'))
     card2 = Column(Integer, ForeignKey('cards.id'))
     result = Column(Integer, ForeignKey('cards.id'))
+
+class CardPack(Base):
+    __tablename__ = 'card_packs'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    price = Column(Integer)
+    cards = Column(String)
+    onyx_fragments = Column(Boolean)
+
+    def get_cards(self):
+        return json.loads(self.cards)
