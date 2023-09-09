@@ -136,7 +136,7 @@ class Scraper():
     def name_converter(self, name):
         # check if name ends with " (Card)"
         type_card = ""
-        url_name = name
+        url_name = name.replace(" ", "_")
         real_name = name
 
         if name.endswith(" (Card)"):
