@@ -71,4 +71,4 @@ packs = ["Halloween",
 "Multiplicity",
 "Fable",
 "Mutant",
-"Jungle"]
+"Jungle", "Shrine"]

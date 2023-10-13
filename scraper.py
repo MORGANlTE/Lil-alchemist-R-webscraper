@@ -111,7 +111,7 @@ class Scraper():
 
 
 
-         # The Card Combos:
+        # The Card Combos:
 
         table_combos = soup.find('table', {'id': 'mw-customcollapsible-combosTable'})
         combos = []
@@ -158,7 +158,12 @@ class Scraper():
     def scrape_card_data(self, name):
 
         type_card, url_name, real_name = self.name_converter(name) 
+        # check if already in database
+        card = session.query(Card).filter_by(name=real_name).first()
+        if card:
+            print(f"Card {name} already in database")
 
+            return
 
         url = f'https://lil-alchemist.fandom.com/wiki/{url_name}'
         print("- " + url)
@@ -300,13 +305,60 @@ class Scraper():
         return "Succes"
     
 
+    def scrape_pack_data_and_add_cards(self, pack_name):
+        url_name = pack_name.replace(" ", "_")
+        url = f'https://lil-alchemist.fandom.com/wiki/Special_Packs/{url_name}'
+        print("- " + url)
+        resp = requests.get(url)
+        soup = BeautifulSoup(resp.content, 'html.parser')
+        # print(soup)
+
+        table = soup.find_all('table', class_='pi-horizontal-group')[0]
+        
+        cost = table.find('td', {'data-source': 'cost'}).get_text(strip=True)
+        print(cost)
+
+        gallery = soup.find('div', id='gallery-0')
+        cardnames = []
+        cards = gallery.find_all('div', class_='lightbox-caption')
+        for card in cards:
+            cardnames.append(card.text.strip())
+
+        onyx_fragments_caption = soup.find('div', class_='lightbox-caption', text="Onyx Fragments")
+        
+        onyx = False
+
+        if onyx_fragments_caption:
+            onyx = True
+
+        cardpack = CardPack(
+            name=pack_name,
+            price=cost,
+            cards=json.dumps(cardnames),
+            onyx_fragments=onyx,
+        )
+
+        session.add(cardpack)
+        session.commit()
+        scraper = Scraper()
+        # add the cards to the pack
+        for card in cardnames:
+            try:
+                scraper.scrape_card_data(card)
+            except Exception as e:
+                print(f"Error on card {card}")
+                print(e)
+
+            time.sleep(2)
+        return "Succes"
 
 
 scraper = Scraper()
 counter = 1
 
 # scraper for the cards: (uncomment to use)
-# print(get_cards())
+#print(get_cards())
+# for name in get_cards():  
 # for name in get_cards():
 #     print(f"#{counter} {name}")
 #     try:
@@ -320,25 +372,19 @@ counter = 1
 #     time.sleep(2)
 #     counter += 1
 
-
-
-# scraper for the packs: (uncomment to use)
-for pack in get_packs():
-    print(f"#{counter} {pack}")
-    try:
-        response = scraper.scrape_pack_data(pack)
-    except Exception as e:
-        print(f"Error on card {pack}")
-        print(e)
-        # print where the error occurs
-        import traceback
-        traceback.print_exc()
-    time.sleep(2)
-    counter += 1
-
-
-
-
+# Add a full new pack (uncomment to use)
+# for pack in get_packs():
+#     print(f"#{counter} {pack}")
+#     try:
+#         response = scraper.scrape_pack_data_and_add_cards(pack)
+#     except Exception as e:
+#         print(f"Error on card {pack}")
+#         print(e)
+#         # print where the error occurs
+#         import traceback
+#         traceback.print_exc()
+#     time.sleep(2)
+#     counter += 1
 
 
 
