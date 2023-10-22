@@ -373,18 +373,18 @@ counter = 1
 #     counter += 1
 
 # Add a full new pack (uncomment to use)
-# for pack in get_packs():
-#     print(f"#{counter} {pack}")
-#     try:
-#         response = scraper.scrape_pack_data_and_add_cards(pack)
-#     except Exception as e:
-#         print(f"Error on card {pack}")
-#         print(e)
-#         # print where the error occurs
-#         import traceback
-#         traceback.print_exc()
-#     time.sleep(2)
-#     counter += 1
+for pack in ["The_Dark"]:
+    print(f"#{counter} {pack}")
+    try:
+        response = scraper.scrape_pack_data_and_add_cards(pack)
+    except Exception as e:
+        print(f"Error on card {pack}")
+        print(e)
+        # print where the error occurs
+        import traceback
+        traceback.print_exc()
+    time.sleep(2)
+    counter += 1
 
 
 
