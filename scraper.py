@@ -183,13 +183,13 @@ class Scraper:
             url_name = name.replace(" ", "_")
             # remove everything after "_(" if this is present
             if "_(" in url_name:
-                real_name = url_name[: url_name.index("_(")]
+                real_name = url_name[: url_name.index("_(")].replace("_", " ")
 
         if name.endswith(" (Onyx)"):
             url_name = name.replace(" ", "_")
             # remove everything after "_(" if this is present
             if "_(" in url_name:
-                real_name = url_name[: url_name.index("_(")]
+                real_name = url_name[: url_name.index("_(")].replace("_", " ")
 
         return type_card, url_name, real_name
 
