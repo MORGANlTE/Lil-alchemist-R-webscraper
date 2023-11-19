@@ -4,8 +4,15 @@ import time
 import json
 from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker
-from db_classes import CardPack, Card, Combination, Recipe, Base, CardLevelStats
-from data.cards import get_cards, get_packs
+from essentials.data.db_classes import (
+    CardPack,
+    Card,
+    Combination,
+    Recipe,
+    Base,
+    CardLevelStats,
+)
+from essentials.data.cards import get_cards, get_packs
 
 
 # Create a SQLite database engine
@@ -408,40 +415,205 @@ class Scraper:
             time.sleep(2)
         return "Succes"
 
+    def scrape_card_data_overwrite(self, name):
+        type_card, url_name, real_name = self.name_converter(name)
+        # check if already in database
+        card = session.query(Card).filter_by(full_name=name).first()
+        if card:
+            # delete the card in the database and add the newer one
+            print(f"Card {name} already in database, overwriting...")
+            session.delete(card)
+            session.commit()
+            # delete all the recipes and combos that contain this card
+            recipes = (
+                session.query(Recipe)
+                .filter_by(card1=name)
+                .union(session.query(Recipe).filter_by(card2=name))
+            )
+            for recipe in recipes:
+                session.delete(recipe)
+            combos = (
+                session.query(Combination)
+                .filter_by(card1=name)
+                .union(session.query(Combination).filter_by(card2=name))
+            )
+            for combo in combos:
+                session.delete(combo)
+            session.commit()
+        else:
+            print(f"Card {name} not in database, adding...")
+
+        url = f"https://lil-alchemist.fandom.com/wiki/{url_name}"
+        print("- " + url)
+        resp = requests.get(url)
+        soup = BeautifulSoup(resp.content, "html.parser")
+        imgurl = self.get_image(soup)
+        (
+            description,
+            base_attack,
+            base_defense,
+            base_power,
+            rarity,
+            form,
+            fusion,
+            where_to_acquire,
+            level_stats,
+            recipes,
+            combos,
+        ) = self.get_rarity_and_form_etc(soup)
+
+        print(f"\tName: {real_name}")
+        print("\tImage URL:", imgurl)
+        print(f"\tDescription: {description}")
+        print(f"\tBase attack: {base_attack}")
+        print(f"\tBase defense: {base_defense}")
+        print(f"\tBase power: {base_power}")
+        print(f"\tRarity: {rarity}")
+        print(f"\tForm: {type_card}{form}")
+        print(f"\tFusion: {fusion}")
+        print(f"\tWhere to acquire: {where_to_acquire}")
+        print(f"\tStats per level: {level_stats}")
+        print(f"\tRecipes:\n\t{recipes}")
+        print(f"\tCombos:\n\t{combos}")
+
+        # Create the Card instance first
+        card = Card(
+            name=real_name,
+            full_name=name,
+            image_url=imgurl,
+            description=description,
+            base_attack=base_attack,
+            base_defense=base_defense,
+            base_power=base_power,
+            rarity=rarity,
+            form=f"{type_card}{form}",
+            fusion=fusion,
+            where_to_acquire=json.dumps(where_to_acquire),
+        )
+
+        # Create CardLevelStats instances and set the relationship
+        for level, stats in level_stats.items():
+            attack = stats["Attack"]
+            defense = stats["Defense"]
+
+            card_level_stats = CardLevelStats(
+                level=level,
+                attack=attack,
+                defense=defense,
+            )
+
+            # Set the relationship on both sides
+            card.level_stats.append(card_level_stats)
+            card_level_stats.card = card
+
+            session.add(card_level_stats)
+
+        # Add the Card instance to the session
+        session.add(card)
+
+        # If you have recipe data, create Recipe instances and add them to the session
+        if recipes and recipes != []:
+            for recipe in recipes:
+                # check if the other card exists in the database
+                card1 = recipe[0]
+                card2 = recipe[1]
+                result = card.full_name
+                # check if opposite recipe exists in the database, in the recipe table
+                opposite_recipe = (
+                    session.query(Recipe).filter_by(card1=card2, card2=card1).first()
+                )
+
+                if not opposite_recipe:
+                    recipe = Recipe(
+                        card1=card1,
+                        card2=card2,
+                        result=result,
+                    )
+                    session.add(recipe)
+
+        # If you have combo data, create Combination instances and add them to the session
+        if combos and combos != []:
+            for combo in combos:
+                # check if the other card exists in the database
+
+                card1 = card.full_name
+                card2 = combo[0]
+                result = combo[1]
+                # check if opposite combo exists in the database, in the combo table
+                opposite_combo = (
+                    session.query(Combination)
+                    .filter_by(card1=card2, card2=card1)
+                    .first()
+                )
+
+                if not opposite_combo:
+                    combo = Combination(
+                        card1=card1,
+                        card2=card2,
+                        result=result,
+                    )
+                    session.add(combo)
+
+        # Commit changes to the database
+        session.commit()
+
+        print(f"Overwritten {card.name} to database")
+        return "Success"
+
 
 scraper = Scraper()
-counter = 1
 
-# scraper for the cards: (uncomment to use)
-# print(get_cards())
-# for name in get_cards():
-# for name in get_cards():
-#     print(f"#{counter} {name}")
-#     try:
-#         response = scraper.scrape_card_data(name)
-#     except Exception as e:
-#         print(f"Error on card {name}")
-#         print(e)
-#         # print where the error occurs
-#         import traceback
-#         traceback.print_exc()
-#     time.sleep(2)
-#     counter += 1
 
-# Add a full new pack (uncomment to use)
-for pack in ["Bloody", "Fun", "Halloween", "Combat"]:
-    print(f"#{counter} {pack}")
-    try:
-        response = scraper.scrape_pack_data_and_add_cards(pack)
-    except Exception as e:
-        print(f"Error on card {pack}")
-        print(e)
-        # print where the error occurs
-        import traceback
+def scrape_new_cards(cards_to_scrape):
+    counter = 1
+    print(cards_to_scrape)
+    for name in get_cards():
+        print(f"#{counter} {name}")
+        try:
+            response = scraper.scrape_card_data(name)
+        except Exception as e:
+            print(f"Error on card {name}")
+            print(e)
+            # print where the error occurs
+            import traceback
 
-        traceback.print_exc()
-    time.sleep(2)
-    counter += 1
+            traceback.print_exc()
+        time.sleep(2)
+        counter += 1
+
+
+def scrape_new_packs(packs_to_scrape):
+    counter = 1
+    for pack in packs_to_scrape:
+        print(f"#{counter} {pack}")
+        try:
+            response = scraper.scrape_pack_data_and_add_cards(pack)
+        except Exception as e:
+            print(f"Error on card {pack}")
+            print(e)
+            # print where the error occurs
+            import traceback
+
+            traceback.print_exc()
+        time.sleep(2)
+        counter += 1
+
+
+def overwrite_cards(cards_to_overwrite):
+    counter = 1
+    for name in cards_to_overwrite:
+        print(f"#{counter} {name}")
+        try:
+            response = scraper.scrape_card_data_overwrite(name)
+        except Exception as e:
+            print(f"Error on card {name}")
+            print(e)
+            # print where the error occurs
+            import traceback
+
+            traceback.print_exc()
+        time.sleep(2)
+        counter += 1
 
 
 # Close the session
