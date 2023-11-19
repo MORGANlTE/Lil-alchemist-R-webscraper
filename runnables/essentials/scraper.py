@@ -599,12 +599,26 @@ def scrape_new_packs(packs_to_scrape):
         counter += 1
 
 
-def overwrite_cards(cards_to_overwrite):
+def overwrite_cards(cards_to_overwrite, onyx_cards):
     counter = 1
     for name in cards_to_overwrite:
         print(f"#{counter} {name}")
         try:
             response = scraper.scrape_card_data_overwrite(name)
+        except Exception as e:
+            print(f"Error on card {name}")
+            print(e)
+            # print where the error occurs
+            import traceback
+
+            traceback.print_exc()
+        time.sleep(2)
+        counter += 1
+
+    for name in onyx_cards:
+        print(f"#{counter} {name}_(Onyx)")
+        try:
+            response = scraper.scrape_card_data_overwrite(name + " (Onyx)")
         except Exception as e:
             print(f"Error on card {name}")
             print(e)

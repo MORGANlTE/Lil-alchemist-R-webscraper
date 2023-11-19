@@ -1,6 +1,7 @@
 from essentials.scraper import overwrite_cards
 
 
+onyx_cards_to_scrape = ["Golem"]
 cards_to_scrape = [
     "Turkey Day",
     "Carver of Doom",
@@ -11,4 +12,5 @@ cards_to_scrape = [
     "Arcane Golem",
 ]
 
-overwrite_cards(cards_to_scrape)
+
+overwrite_cards(cards_to_scrape, onyx_cards_to_scrape)
