@@ -415,6 +415,55 @@ class Scraper:
             time.sleep(2)
         return "Succes"
 
+    def scrape_pack_data_and_overwrite_cards(self, pack_name):
+        url_name = pack_name.replace(" ", "_")
+        url = f"https://lil-alchemist.fandom.com/wiki/Special_Packs/{url_name}"
+        print("- " + url)
+        resp = requests.get(url)
+        soup = BeautifulSoup(resp.content, "html.parser")
+        # print(soup)
+
+        table = soup.find_all("table", class_="pi-horizontal-group")[0]
+
+        cost = table.find("td", {"data-source": "cost"}).get_text(strip=True)
+        print(cost)
+
+        gallery = soup.find("div", id="gallery-0")
+        cardnames = []
+        cards = gallery.find_all("div", class_="lightbox-caption")
+        for card in cards:
+            cardnames.append(card.text.strip())
+
+        onyx_fragments_caption = soup.find(
+            "div", class_="lightbox-caption", text="Onyx Fragments"
+        )
+
+        onyx = False
+
+        if onyx_fragments_caption:
+            onyx = True
+
+        cardpack = CardPack(
+            name=pack_name,
+            price=cost,
+            cards=json.dumps(cardnames),
+            onyx_fragments=onyx,
+        )
+
+        session.add(cardpack)
+        session.commit()
+        scraper = Scraper()
+        # add the cards to the pack
+        for card in cardnames:
+            try:
+                scraper.scrape_card_data_overwrite(card)
+            except Exception as e:
+                print(f"Error on card {card}")
+                print(e)
+
+            time.sleep(2)
+        return "Succes"
+
     def scrape_card_data_overwrite(self, name):
         type_card, url_name, real_name = self.name_converter(name)
         # check if already in database
@@ -588,6 +637,23 @@ def scrape_new_packs(packs_to_scrape):
         print(f"#{counter} {pack}")
         try:
             response = scraper.scrape_pack_data_and_add_cards(pack)
+        except Exception as e:
+            print(f"Error on card {pack}")
+            print(e)
+            # print where the error occurs
+            import traceback
+
+            traceback.print_exc()
+        time.sleep(2)
+        counter += 1
+
+
+def overwrite_packs(packs_to_scrape):
+    counter = 1
+    for pack in packs_to_scrape:
+        print(f"#{counter} {pack}")
+        try:
+            response = scraper.scrape_pack_data_and_overwrite_cards(pack)
         except Exception as e:
             print(f"Error on card {pack}")
             print(e)

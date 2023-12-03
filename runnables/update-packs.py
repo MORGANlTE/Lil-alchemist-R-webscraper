@@ -1,10 +1,9 @@
-from essentials.scraper import overwrite_cards
+from essentials.scraper import overwrite_packs
 
 # add a card to the cards_to_scrape list to scrape it
 # if it's an onyx aswell, add it to the onyx_cards_to_scrape list
 
-onyx_cards_to_scrape = ["Golem"]
-cards_to_scrape = [
+packs_to_scrape = [
     "Golem",
     "Turkey Day",
     "Carver of Doom",
@@ -16,4 +15,4 @@ cards_to_scrape = [
 ]
 
 
-overwrite_cards(cards_to_scrape, onyx_cards_to_scrape)
+overwrite_packs(packs_to_scrape)
