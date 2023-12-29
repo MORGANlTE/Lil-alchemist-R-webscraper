@@ -469,10 +469,6 @@ class Scraper:
         # check if already in database
         card = session.query(Card).filter_by(full_name=name).first()
         if card:
-            # delete the card in the database and add the newer one
-            print(f"Card {name} already in database, overwriting...")
-            session.delete(card)
-            session.commit()
             # delete all the recipes and combos that contain this card
             recipes = (
                 session.query(Recipe)
@@ -525,20 +521,37 @@ class Scraper:
         print(f"\tRecipes:\n\t{recipes}")
         print(f"\tCombos:\n\t{combos}")
 
-        # Create the Card instance first
-        card = Card(
-            name=real_name,
-            full_name=name,
-            image_url=imgurl,
-            description=description,
-            base_attack=base_attack,
-            base_defense=base_defense,
-            base_power=base_power,
-            rarity=rarity,
-            form=f"{type_card}{form}",
-            fusion=fusion,
-            where_to_acquire=json.dumps(where_to_acquire),
-        )
+        card = session.query(Card).filter_by(full_name=name).first()
+        if card:
+            print(f"Card {name} already in database, overwriting...")
+            card.name = real_name
+            card.full_name = name
+            card.image_url = imgurl
+            card.description = description
+            card.base_attack = base_attack
+            card.base_defense = base_defense
+            card.base_power = base_power
+            card.rarity = rarity
+            card.form = f"{type_card}{form}"
+            card.fusion = fusion
+            card.where_to_acquire = json.dumps(where_to_acquire)
+        else:
+            card = Card(
+                name=real_name,
+                full_name=name,
+                image_url=imgurl,
+                description=description,
+                base_attack=base_attack,
+                base_defense=base_defense,
+                base_power=base_power,
+                rarity=rarity,
+                form=f"{type_card}{form}",
+                fusion=fusion,
+                where_to_acquire=json.dumps(where_to_acquire),
+            )
+            session.add(card)
+
+        session.commit()
 
         # Create CardLevelStats instances and set the relationship
         for level, stats in level_stats.items():
@@ -555,10 +568,8 @@ class Scraper:
             card.level_stats.append(card_level_stats)
             card_level_stats.card = card
 
-            session.add(card_level_stats)
-
         # Add the Card instance to the session
-        session.add(card)
+        session.commit()
 
         # If you have recipe data, create Recipe instances and add them to the session
         if recipes and recipes != []:

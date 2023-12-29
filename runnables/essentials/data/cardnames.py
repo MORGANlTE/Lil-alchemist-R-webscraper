@@ -1,2884 +1,1502 @@
-cards = ["Anaconda"
-,"Anaconda"
-,"Angel"
-,"Angel"
-,"Ash"
-,"Ash"
-,"Baseball Bat"
-,"Baseball Bat"
-,"Bat"
-,"Bat"
-,"Bomb"
-,"Bomb"
-,"Car"
-,"Car"
-,"Catapult"
-,"Catapult"
-,"Centaur"
-,"Centaur"
-,"Cobra"
-,"Cobra"
-,"Death"
-,"Death"
-,"Death Metal"
-,"Death Metal"
-,"Demon"
-,"Demon"
-,"Dragon"
-,"Dragon"
-,"Earth"
-,"Earth"
-,"Earthquake"
-,"Earthquake"
-,"Elf"
-,"Elf"
-,"Fairy"
-,"Fairy"
-,"Fire"
-,"Fire"
-,"Flood"
-,"Flood"
-,"Ghost"
-,"Ghost"
-,"Giant Sword"
-,"Giant Sword"
-,"Golem"
-,"Golem"
-,"Grabbers"
-,"Grabbers"
-,"Hammer"
-,"Hammer"
-,"Holy Water"
-,"Holy Water"
-,"Horse"
-,"Horse"
-,"Jet Fighter"
-,"Jet Fighter"
-,"Killer Plant"
-,"Killer Plant"
-,"Lava"
-,"Lava"
-,"Metal"
-,"Metal"
-,"Pegasus"
-,"Pegasus"
-,"Poison"
-,"Poison"
-,"Radiation"
-,"Radiation"
-,"Rainbow"
-,"Rainbow"
-,"Seahorse"
-,"Seahorse"
-,"Snake"
-,"Snake"
-,"Snakes on a Jet"
-,"Snakes on a Jet"
-,"Steam"
-,"Steam"
-,"Submarine"
-,"Submarine"
-,"Sun"
-,"Sun"
-,"Tree"
-,"Tree"
-,"Trident"
-,"Trident"
-,"Undead"
-,"Undead"
-,"Vampire"
-,"Vampire"
-,"Vulture"
-,"Vulture"
-,"Water"
-,"Water"
-,"Water Serpent"
-,"Water Serpent"
-,"Werewolf"
-,"Werewolf"
-,"Wildfire"
-,"Wildfire"
-,"Wings"
-,"Wings"
-,"Wolf"
-,"Wolf"
-,"Wolfpack"
-,"Wolfpack"
-,"Armored Dragon"
-,"Armored Dragon"
-,"Battle Mage"
-,"Battle Mage"
-,"Blue Knight"
-,"Blue Knight"
-,"Care Chilla"
-,"Care Chilla"
-,"Cavalry"
-,"Cavalry"
-,"Caveman"
-,"Caveman"
-,"Chinchilla"
-,"Chinchilla"
-,"Clown"
-,"Clown"
-,"Club"
-,"Club"
-,"Dark Matter"
-,"Dark Matter"
-,"Dire Wolf"
-,"Dire Wolf"
-,"Dwarf"
-,"Dwarf"
-,"Fire Golem"
-,"Fire Golem"
-,"Fire Sprite"
-,"Fire Sprite"
-,"Fireball"
-,"Fireball"
-,"Firefox"
-,"Firefox"
-,"Flame Sword"
-,"Flame Sword"
-,"Gargoyle"
-,"Gargoyle"
-,"Gnome"
-,"Gnome"
-,"Green Knight"
-,"Green Knight"
-,"Headless Rider"
-,"Headless Rider"
-,"Human"
-,"Human"
-,"Ice Golem"
-,"Ice Golem"
-,"Imp"
-,"Imp"
-,"Knight"
-,"Knight"
-,"Knowledge"
-,"Knowledge"
-,"Lochness Monster"
-,"Lochness Monster"
-,"Magic"
-,"Magic"
-,"Medusa"
-,"Medusa"
-,"Mermaid"
-,"Mermaid"
-,"Metal Golem"
-,"Metal Golem"
-,"Meteor"
-,"Meteor"
-,"Morning Star"
-,"Morning Star"
-,"Mr. Ted"
-,"Mr. Ted"
-,"Muse"
-,"Muse"
-,"Nightshade"
-,"Nightshade"
-,"Ocean Defender"
-,"Ocean Defender"
-,"Phoenix"
-,"Phoenix"
-,"Pirate Zombie"
-,"Pirate Zombie"
-,"Poseidon"
-,"Poseidon"
-,"Prehistoric"
-,"Prehistoric"
-,"Puff"
-,"Puff"
-,"Red Knight"
-,"Red Knight"
-,"Rock Slide"
-,"Rock Slide"
-,"Scholar"
-,"Scholar"
-,"Scythe"
-,"Scythe"
-,"Skeletal Mage"
-,"Skeletal Mage"
-,"Sledge Hammer"
-,"Sledge Hammer"
-,"Superhero"
-,"Superhero"
-,"Sword"
-,"Sword"
-,"The Incinerator"
-,"The Incinerator"
-,"The Magician"
-,"The Magician"
-,"The Reaper"
-,"The Reaper"
-,"The World Tree"
-,"The World Tree"
-,"Treant"
-,"Treant"
-,"Ultra Dude"
-,"Ultra Dude"
-,"Vampire Hunter"
-,"Vampire Hunter"
-,"Void"
-,"Void"
-,"Void Fiend"
-,"Void Fiend"
-,"War's Horse"
-,"War's Horse"
-,"Wasp"
-,"Wasp"
-,"Water Sprite"
-,"Water Sprite"
-,"Witch"
-,"Witch"
-,"Wiz's Apprentice"
-,"Wiz's Apprentice"
-,"Wizard"
-,"Wizard"
-,"Wooden Golem"
-,"Wooden Golem"
-,"Wyvern"
-,"Wyvern"
-,"Absolute Zero"
-,"Absolute Zero"
-,"Affliction"
-,"Affliction"
-,"Air Sprite"
-,"Air Sprite"
-,"AL 9001"
-,"AL 9001"
-,"Alien Band"
-,"Alien Band"
-,"Alien Human Hybrid"
-,"Alien Human Hybrid"
-,"Alien Intruders"
-,"Alien Intruders"
-,"Alien Reptile"
-,"Alien Reptile"
-,"Alien Sorceress"
-,"Alien Sorceress"
-,"Alpha"
-,"Alpha"
-,"Amazing Dog"
-,"Amazing Dog"
-,"Ancient Ark"
-,"Ancient Ark"
-,"Angel Food Cake"
-,"Angel Food Cake"
-,"Angel Kid"
-,"Angel Kid"
-,"Angel of Wisdom"
-,"Angel of Wisdom"
-,"Angel of Wrath"
-,"Angel of Wrath"
-,"Angel Trumpeter"
-,"Angel Trumpeter"
-,"Angelfish"
-,"Angelfish"
-,"Angelic Mutant"
-,"Angelic Mutant"
-,"Anger"
-,"Anger"
-,"Angry Bride"
-,"Angry Bride"
-,"Angry Mob"
-,"Angry Mob"
-,"Animal Whisperer"
-,"Animal Whisperer"
-,"Ape Lost City"
-,"Ape Lost City"
-,"Apocalypse"
-,"Apocalypse"
-,"Arcade"
-,"Arcade"
-,"Arcane Golem"
-,"Arcane Golem"
-,"Arch Angel"
-,"Arch Angel"
-,"Arch Mage"
-,"Arch Mage"
-,"Ares"
-,"Ares"
-,"Ariel (Card)"
-,"Ariel (Card)"
-,"Arm Parasite"
-,"Arm Parasite"
-,"Assassin"
-,"Assassin"
-,"Asteroid Prince"
-,"Asteroid Prince"
-,"Astronaut"
-,"Astronaut"
-,"Atlas"
-,"Atlas"
-,"Aurora"
-,"Aurora"
-,"Auto Champion"
-,"Auto Champion"
-,"Avalanche"
-,"Avalanche"
-,"Avery (Card)"
-,"Avery (Card)"
-,"Aviator Chin"
-,"Aviator Chin"
-,"Baby New Year"
-,"Baby New Year"
-,"Ball Companion"
-,"Ball Companion"
-,"Bard"
-,"Bard"
-,"Bastion"
-,"Bastion"
-,"Bear"
-,"Bear"
-,"Bear Dog"
-,"Bear Dog"
-,"Bear Magus"
-,"Bear Magus"
-,"Beauty"
-,"Beauty"
-,"Beaver"
-,"Beaver"
-,"Beguiling Android"
-,"Beguiling Android"
-,"Big Foot"
-,"Big Foot"
-,"Bill (Card)"
-,"Bill (Card)"
-,"Bionic Chinchilla"
-,"Bionic Chinchilla"
-,"Bird"
-,"Bird"
-,"Bird Flu"
-,"Bird Flu"
-,"Black Cat"
-,"Black Cat"
-,"Black Hole"
-,"Black Hole"
-,"Black Mamba"
-,"Black Mamba"
-,"Blacksmith"
-,"Blacksmith"
-,"Blob"
-,"Blob"
-,"Blood"
-,"Blood"
-,"Blood Analyst"
-,"Blood Analyst"
-,"Blood Imp"
-,"Blood Imp"
-,"Bloodlust"
-,"Bloodlust"
-,"Blowfish"
-,"Blowfish"
-,"Blue Fizz Refresher"
-,"Blue Fizz Refresher"
-,"Blue Folk"
-,"Blue Folk"
-,"Blue Iron"
-,"Blue Iron"
-,"Blue Witch"
-,"Blue Witch"
-,"Bluebeard"
-,"Bluebeard"
-,"Bob (Card)"
-,"Bob (Card)"
-,"Bolo"
-,"Bolo"
-,"Bone"
-,"Bone"
-,"Bone Hound"
-,"Bone Hound"
-,"Bone Sword"
-,"Bone Sword"
-,"Bone Xylophone"
-,"Bone Xylophone"
-,"Boneyard"
-,"Boneyard"
-,"Book Burner"
-,"Book Burner"
-,"Bookworm"
-,"Bookworm"
-,"Brian (Card)"
-,"Brian (Card)"
-,"Bridget (Card)"
-,"Bridget (Card)"
-,"Brontosaurus"
-,"Brontosaurus"
-,"Broomstick"
-,"Broomstick"
-,"Building Blocks"
-,"Building Blocks"
-,"Bumblebee Bat"
-,"Bumblebee Bat"
-,"Burrowling"
-,"Burrowling"
-,"Butterfly"
-,"Butterfly"
-,"Camel"
-,"Camel"
-,"Camouflage"
-,"Camouflage"
-,"Candy Hearts"
-,"Candy Hearts"
-,"Candy Princess"
-,"Candy Princess"
-,"Candy Witch"
-,"Candy Witch"
-,"Carnivorous Pit"
-,"Carnivorous Pit"
-,"Cartoon"
-,"Cartoon"
-,"Castle (Card)"
-,"Castle (Card)"
-,"Cat"
-,"Cat"
-,"Cat and Mouse"
-,"Cat and Mouse"
-,"Catfish"
-,"Catfish"
-,"Cave Monkeys"
-,"Cave Monkeys"
-,"Caveman Inventor"
-,"Caveman Inventor"
-,"Chameleon"
-,"Chameleon"
-,"Changeling"
-,"Changeling"
-,"Chaos Champion"
-,"Chaos Champion"
-,"Chaos Sprite"
-,"Chaos Sprite"
-,"Charles (Card)"
-,"Charles (Card)"
-,"Cheetah"
-,"Cheetah"
-,"Chinchilla Knight"
-,"Chinchilla Knight"
-,"Chinchilla Raider"
-,"Chinchilla Raider"
-,"Chinchillalope"
-,"Chinchillalope"
-,"Chinzilla"
-,"Chinzilla"
-,"Chinzombie"
-,"Chinzombie"
-,"Chloe (Card)"
-,"Chloe (Card)"
-,"Chomp Dude"
-,"Chomp Dude"
-,"Chomp Dude Spirits"
-,"Chomp Dude Spirits"
-,"Cinderella"
-,"Cinderella"
-,"Claws"
-,"Claws"
-,"Claymore of Doom"
-,"Claymore of Doom"
-,"Cleopatra"
-,"Cleopatra"
-,"Cleric"
-,"Cleric"
-,"Clyde (Card)"
-,"Clyde (Card)"
-,"Cold Hearted"
-,"Cold Hearted"
-,"Commander of Sin"
-,"Commander of Sin"
-,"Conan (Card)"
-,"Conan (Card)"
-,"Conch Shell of Doom"
-,"Conch Shell of Doom"
-,"Confectioner Will"
-,"Confectioner Will"
-,"Conscience"
-,"Conscience"
-,"Court Jester"
-,"Court Jester"
-,"Crazy Cat Person"
-,"Crazy Cat Person"
-,"Crazy Pirate King"
-,"Crazy Pirate King"
-,"Cryo Smuggler"
-,"Cryo Smuggler"
-,"Cthulhu"
-,"Cthulhu"
-,"Cuckoo"
-,"Cuckoo"
-,"Cursed"
-,"Cursed"
-,"Cursed Apple"
-,"Cursed Apple"
-,"Cursed Aztec Prince"
-,"Cursed Aztec Prince"
-,"Cursed Monkey Paw"
-,"Cursed Monkey Paw"
-,"Cute Charm"
-,"Cute Charm"
-,"Cybernetic Humans"
-,"Cybernetic Humans"
-,"Cyborg Alien Mutant"
-,"Cyborg Alien Mutant"
-,"Da Vinci Flyer"
-,"Da Vinci Flyer"
-,"Dante (Card)"
-,"Dante (Card)"
-,"Dark Alchemist (Card)"
-,"Dark Alchemist (Card)"
-,"Dark Angel"
-,"Dark Angel"
-,"Dark Hero"
-,"Dark Hero"
-,"Darkness"
-,"Death Adder Shadow"
-,"Death Adder Shadow"
-,"Death's Horse"
-,"Death's Horse"
-,"Demon Queen"
-,"Demon Queen"
-,"Demonic Fighter"
-,"Demonic Fighter"
-,"Demonite"
-,"Demonite"
-,"Desert"
-,"Desert"
-,"Destruction"
-,"Destruction"
-,"Devil"
-,"Devil"
-,"Diamond Queen"
-,"Diamond Queen"
-,"Discipliner"
-,"Discipliner"
-,"Disgruntled Beavers"
-,"Disgruntled Beavers"
-,"Doc Lobster"
-,"Doc Lobster"
-,"Doctor"
-,"Doctor"
-,"Dog"
-,"Dog"
-,"Doomsday Omen"
-,"Doomsday Omen"
-,"Dorian Gray"
-,"Dorian Gray"
-,"Double Rainbow"
-,"Double Rainbow"
-,"Doves"
-,"Doves"
-,"Dr. Jekyll"
-,"Dr. Jekyll"
-,"Dr. Robo (Card)"
-,"Dr. Robo (Card)"
-,"Draco (Card)"
-,"Draco (Card)"
-,"Dracula"
-,"Dracula"
-,"Dragon Fairy"
-,"Dragon Fairy"
-,"Dragon Rider"
-,"Dragon Rider"
-,"Dress Up Spud"
-,"Dress Up Spud"
-,"Driller"
-,"Driller"
-,"Druid"
-,"Druid"
-,"Dryad"
-,"Dryad"
-,"Duncan (Card)"
-,"Duncan (Card)"
-,"Dust Bath"
-,"Dust Bath"
-,"Eagle Hero"
-,"Eagle Hero"
-,"Earthworm"
-,"Earthworm"
-,"Egyptian Tomb"
-,"Egyptian Tomb"
-,"Elf King"
-,"Elf King"
-,"Elf Servant"
-,"Elf Servant"
-,"Elf Wizard"
-,"Elf Wizard"
-,"Elmoira (Card)"
-,"Elmoira (Card)"
-,"Elven Power Elixir"
-,"Elven Power Elixir"
-,"Emberzard"
-,"Emberzard"
-,"Enchanted Snowman"
-,"Enchanted Snowman"
-,"Energy"
-,"Energy"
-,"Energy Generator"
-,"Energy Generator"
-,"Eternal Child"
-,"Eternal Child"
-,"Eternal Dragon"
-,"Eternal Dragon"
-,"Ethyl (Card)"
-,"Ethyl (Card)"
-,"Evil Queen"
-,"Evil Queen"
-,"Evil Symbiote"
-,"Evil Symbiote"
-,"Evil Vizier"
-,"Evil Vizier"
-,"Excalibur"
-,"Excalibur"
-,"Extraterrestrial"
-,"Extraterrestrial"
-,"Fairy Godmother"
-,"Fairy Godmother"
-,"Fairy Tale"
-,"Fairy Tale"
-,"Family Reunion"
-,"Family Reunion"
-,"Farmer"
-,"Farmer"
-,"Fast Food"
-,"Fast Food"
-,"Fickle Eight Ball"
-,"Fickle Eight Ball"
-,"Firefly"
-,"Firefly"
-,"Fireworks"
-,"Fireworks"
-,"Fish"
-,"Fish"
-,"Flight Deck Fairy"
-,"Flight Deck Fairy"
-,"Flint (Card)"
-,"Flint (Card)"
-,"Flip (Card)"
-,"Flip (Card)"
-,"Flower Power"
-,"Flower Power"
-,"Flux Inventor"
-,"Flux Inventor"
-,"Flying Fish"
-,"Flying Fish"
-,"Flying Monkey"
-,"Flying Monkey"
-,"Flying Squirrel"
-,"Flying Squirrel"
-,"Flying Trooper"
-,"Flying Trooper"
-,"Food"
-,"Food"
-,"Food Chain"
-,"Food Chain"
-,"Forbidden Love"
-,"Forbidden Love"
-,"Forestfolk"
-,"Forestfolk"
-,"Four Eyed Raven"
-,"Four Eyed Raven"
-,"Friendly Dino"
-,"Friendly Dino"
-,"Frog Prince"
-,"Frog Prince"
-,"Fruit Cake"
-,"Fruit Cake"
-,"Fungal Growth"
-,"Fungal Growth"
-,"Gabriel's Horn"
-,"Gabriel's Horn"
-,"Gaia"
-,"Gaia"
-,"Galaxy Wars"
-,"Galaxy Wars"
-,"Gale (Card)"
-,"Gale (Card)"
-,"Genius and Insane"
-,"Genius and Insane"
-,"Geode"
-,"Geode"
-,"Geomancer"
-,"Geomancer"
-,"Ghost Communicator"
-,"Ghost Communicator"
-,"Ghost Pirate"
-,"Ghost Pirate"
-,"Giant"
-,"Giant"
-,"Gilded Horse"
-,"Gilded Horse"
-,"Gingerbread Warrior"
-,"Gingerbread Warrior"
-,"Gladiator"
-,"Gladiator"
-,"Gladys (Card)"
-,"Gladys (Card)"
-,"Gnome Gadgeteer"
-,"Gnome Gadgeteer"
-,"Goblin"
-,"Goblin"
-,"Goblin Banker"
-,"Goblin Banker"
-,"Goblin Hybrid"
-,"Goblin Hybrid"
-,"Goblor (Card)"
-,"Goblor (Card)"
-,"Golden Egg Goose"
-,"Golden Egg Goose"
-,"Golden Harp"
-,"Golden Harp"
-,"Golden Scarab"
-,"Golden Scarab"
-,"Gorezilla"
-,"Gorezilla"
-,"Graham (Card)"
-,"Graham (Card)"
-,"Great Wall"
-,"Great Wall"
-,"Greg (Card)"
-,"Greg (Card)"
-,"Gremlin"
-,"Gremlin"
-,"Groundhog"
-,"Groundhog"
-,"Guardian Angel"
-,"Guardian Angel"
-,"Gummy Duo"
-,"Gummy Duo"
-,"Gummy Worm"
-,"Gummy Worm"
-,"Gus (Card)"
-,"Gus (Card)"
-,"Gwen (Card)"
-,"Gwen (Card)"
-,"Hacker Hero"
-,"Hacker Hero"
-,"Half-blood Professor"
-,"Half-blood Professor"
-,"Half-Fairy"
-,"Half-Fairy"
-,"Halloween"
-,"Halloween"
-,"Hamlet"
-,"Hamlet"
-,"Happily Ever After"
-,"Happily Ever After"
-,"Harmony (Card)"
-,"Harmony (Card)"
-,"Head Scholar"
-,"Head Scholar"
-,"Healing"
-,"Healing"
-,"Healthbot Hero"
-,"Healthbot Hero"
-,"Healthy Hero"
-,"Healthy Hero"
-,"Heavenly Dog"
-,"Heavenly Dog"
-,"Helene (Card)"
-,"Helene (Card)"
-,"Henry (Card)"
-,"Henry (Card)"
-,"Hephaestus"
-,"Hephaestus"
-,"Hercules"
-,"Hercules"
-,"Hesperide's Tree"
-,"Hesperide's Tree"
-,"Hey Cat"
-,"Hey Cat"
-,"Hibernation"
-,"Hibernation"
-,"Holiday Lights"
-,"Holiday Lights"
-,"Holidays"
-,"Holidays"
-,"Holy Grail"
-,"Holy Grail"
-,"Holy Mackerel"
-,"Holy Mackerel"
-,"Honey Beer"
-,"Honey Beer"
-,"Horn"
-,"Horn"
-,"Horn Dagger"
-,"Horn Dagger"
-,"Horn of Life"
-,"Horn of Life"
-,"Horn of Winter"
-,"Horn of Winter"
-,"Hot Dog"
-,"Hot Dog"
-,"Hubert (Card)"
-,"Hubert (Card)"
-,"Hungry Crocodile"
-,"Hungry Crocodile"
-,"Hunting Alien"
-,"Hunting Alien"
-,"Hybrid"
-,"Hybrid"
-,"Hydra"
-,"Hydra"
-,"Hydrabot"
-,"Hydrabot"
-,"Hydromancer"
-,"Hydromancer"
-,"Hypnotist"
-,"Hypnotist"
-,"Hypnoturtle"
-,"Hypnoturtle"
-,"Hypothermia"
-,"Hypothermia"
-,"Ice"
-,"Ice"
-,"Ice Imp"
-,"Ice Imp"
-,"Ice Lotus"
-,"Ice Lotus"
-,"Ice Queen"
-,"Ice Queen"
-,"Illusionist"
-,"Illusionist"
-,"Immortal One"
-,"Immortal One"
-,"Immortality"
-,"Immortality"
-,"Indiana Ford"
-,"Indiana Ford"
-,"Template:Infobox card"
-,"Template:Infobox card/doc"
-,"Inner Demons"
-,"Inner Demons"
-,"Insanity Wolf"
-,"Insanity Wolf"
-,"Insect"
-,"Insect"
-,"Insidious Emperor"
-,"Insidious Emperor"
-,"Invention"
-,"Invention"
-,"Invisible Dude"
-,"Invisible Dude"
-,"Ivana (Card)"
-,"Ivana (Card)"
-,"Jack-o'-lantern"
-,"Jack-o'-lantern"
-,"Janice (Card)"
-,"Janice (Card)"
-,"Jasper (Card)"
-,"Jasper (Card)"
-,"Jem (Card)"
-,"Jem (Card)"
-,"Jim (Card)"
-,"Jim (Card)"
-,"Jungle"
-,"Jungle"
-,"Jungle Welcoming"
-,"Jungle Welcoming"
-,"Kate (Card)"
-,"Kate (Card)"
-,"Killer Vegetables"
-,"Killer Vegetables"
-,"King"
-,"King"
-,"King Dodo (Card)"
-,"King Dodo (Card)"
-,"King Kyle (Card)"
-,"King Kyle (Card)"
-,"King Midas"
-,"King Midas"
-,"Kite"
-,"Kite"
-,"Kraken"
-,"Kraken"
-,"Kung Fu Master"
-,"Kung Fu Master"
-,"Lady of the Lake"
-,"Lady of the Lake"
-,"Lady Revenant"
-,"Lady Revenant"
-,"Larry (Card)"
-,"Larry (Card)"
-,"Laser Sword"
-,"Laser Sword"
-,"Laughing Pet Alien"
-,"Laughing Pet Alien"
-,"Leader"
-,"Leader"
-,"Leaf Insect"
-,"Leaf Insect"
-,"Learning Rainbow"
-,"Learning Rainbow"
-,"Leech"
-,"Leech"
-,"Legendary Hero"
-,"Legendary Hero"
-,"Leon (Card)"
-,"Leon (Card)"
-,"Leprechaun"
-,"Leprechaun"
-,"Lich"
-,"Lich"
-,"Life"
-,"Life"
-,"Life Shroom"
-,"Life Shroom"
-,"Lightspeed"
-,"Lightspeed"
-,"Lil' Android"
-,"Lil' Android"
-,"Lion Prince"
-,"Lion Prince"
-,"Lizard Bounty Hunter"
-,"Lizard Bounty Hunter"
-,"Love"
-,"Love"
-,"Love Bug"
-,"Love Bug"
-,"Luckymon"
-,"Luckymon"
-,"Luna (Card)"
-,"Luna (Card)"
-,"Lunar Pie"
-,"Lunar Pie"
-,"MacGryber"
-,"MacGryber"
-,"Madness"
-,"Madness"
-,"Magic Carpet"
-,"Magic Carpet"
-,"Magicianbot"
-,"Magicianbot"
-,"Magicod"
-,"Magicod"
-,"Mama Brain"
-,"Mama Brain"
-,"Mana Elf"
-,"Mana Elf"
-,"Many Faced Man"
-,"Many Faced Man"
-,"Margarfree"
-,"Margarfree"
-,"Martial Arts"
-,"Martial Arts"
-,"Mask of Mischief"
-,"Mask of Mischief"
-,"Master Dueler"
-,"Master Dueler"
-,"Medieval"
-,"Medieval"
-,"Megalodon"
-,"Megalodon"
-,"Menorah"
-,"Menorah"
-,"Mermaid King"
-,"Mermaid King"
-,"Merry John"
-,"Merry John"
-,"Messenger Bird"
-,"Messenger Bird"
-,"Milton (Card)"
-,"Milton (Card)"
-,"Mind Control"
-,"Mind Control"
-,"Miner"
-,"Miner"
-,"Miniature"
-,"Miniature"
-,"Mist Monkey"
-,"Mist Monkey"
-,"Mistletoe"
-,"Mistletoe"
-,"Momo X"
-,"Momo X"
-,"Monk"
-,"Monk"
-,"Monkey"
-,"Monkey"
-,"Monkey Shaman"
-,"Monkey Shaman"
-,"Monster"
-,"Monster"
-,"Monster & Beauty"
-,"Monster & Beauty"
-,"Monster Truck"
-,"Monster Truck"
-,"Moon"
-,"Moon"
-,"Moon Buggy"
-,"Moon Buggy"
-,"Moon Goddess"
-,"Moon Goddess"
-,"Moon Jellyfish"
-,"Moon Jellyfish"
-,"Mosquito"
-,"Mosquito"
-,"Mr. Buttons (Card)"
-,"Mr. Buttons (Card)"
-,"Mr. Moneybags"
-,"Mr. Moneybags"
-,"Mudslide"
-,"Mudslide"
-,"Multiples"
-,"Multiples"
-,"Multiverse"
-,"Multiverse"
-,"Mumbling Kid"
-,"Mumbling Kid"
-,"Mummy"
-,"Mummy"
-,"Music"
-,"Music"
-,"Musical Workers"
-,"Musical Workers"
-,"Mutant Man"
-,"Mutant Man"
-,"Mutated Fish"
-,"Mutated Fish"
-,"Mutation"
-,"Mutation"
-,"Myth"
-,"Myth"
-,"Nadia (Card)"
-,"Nadia (Card)"
-,"Naga Queen"
-,"Naga Queen"
-,"Nanopower"
-,"Nanopower"
-,"Nearly Limbless Larry"
-,"Nearly Limbless Larry"
-,"Necromancer"
-,"Necromancer"
-,"Negative Slime"
-,"Negative Slime"
-,"Nessa (Card)"
-,"Nessa (Card)"
-,"Night Children"
-,"Night Children"
-,"Night Dragon"
-,"Night Dragon"
-,"Night Owl"
-,"Night Owl"
-,"Nightmare"
-,"Nightmare"
-,"Ninchilla"
-,"Ninchilla"
-,"Nine Tails Ninja"
-,"Nine Tails Ninja"
-,"Nosferatu Duck"
-,"Nosferatu Duck"
-,"Nutcracker"
-,"Nutcracker"
-,"Nymph"
-,"Nymph"
-,"Oasis"
-,"Oasis"
-,"Ogre Princess"
-,"Ogre Princess"
-,"Olive (Card)"
-,"Olive (Card)"
-,"Opera Ghost"
-,"Opera Ghost"
-,"Optic Mutant"
-,"Optic Mutant"
-,"Other Caroline"
-,"Other Caroline"
-,"Otto (Card)"
-,"Otto (Card)"
-,"Paige (Card)"
-,"Paige (Card)"
-,"Paladin"
-,"Paladin"
-,"Pantor"
-,"Pantor"
-,"Parasite"
-,"Parasite"
-,"Parasitic Bioweapon"
-,"Parasitic Bioweapon"
-,"Parched Skeleton"
-,"Parched Skeleton"
-,"Parrot"
-,"Parrot"
-,"Pebbles (Card)"
-,"Pebbles (Card)"
-,"Penguin"
-,"Penguin"
-,"Pestilence's Horse"
-,"Pestilence's Horse"
-,"Peter (Card)"
-,"Peter (Card)"
-,"Phil (Card)"
-,"Phil (Card)"
-,"Philosopher's Stone"
-,"Philosopher's Stone"
-,"Pink Skull"
-,"Pink Skull"
-,"Pinocchio"
-,"Pinocchio"
-,"Pirate Captain"
-,"Pirate Captain"
-,"Pixie Sugar"
-,"Pixie Sugar"
-,"Pixies"
-,"Pixies"
-,"Plague Doctor"
-,"Plague Doctor"
-,"Planet"
-,"Planet"
-,"Planet Commander"
-,"Planet Commander"
-,"Plant"
-,"Plant"
-,"Plymouth Rock"
-,"Plymouth Rock"
-,"Pocket Pet"
-,"Pocket Pet"
-,"Poison Cloud"
-,"Poison Cloud"
-,"Poison Dagger"
-,"Poison Dagger"
-,"Poison Dragon"
-,"Poison Dragon"
-,"Polar Bear"
-,"Polar Bear"
-,"Pony Princess"
-,"Pony Princess"
-,"Power Nap"
-,"Power Nap"
-,"Praying Mantis"
-,"Praying Mantis"
-,"Precious Ring"
-,"Precious Ring"
-,"Precious Ring Bearer"
-,"Precious Ring Bearer"
-,"Precious Ring Lore"
-,"Precious Ring Lore"
-,"Prince Charming"
-,"Prince Charming"
-,"Princess"
-,"Princess"
-,"Professor Beagle"
-,"Professor Beagle"
-,"Professor Y"
-,"Professor Y"
-,"Prophecy Wizard"
-,"Prophecy Wizard"
-,"Protozoan Villain"
-,"Protozoan Villain"
-,"Psychic"
-,"Psychic"
-,"Psychic Assassin"
-,"Psychic Assassin"
-,"Psychic Clone"
-,"Psychic Clone"
-,"Pterodactyl"
-,"Pterodactyl"
-,"Puff Hero"
-,"Puff Hero"
-,"Pumpkin Carriage"
-,"Pumpkin Carriage"
-,"Pyromancer"
-,"Pyromancer"
-,"Quinn (Card)"
-,"Quinn (Card)"
-,"Rabbit Hole"
-,"Rabbit Hole"
-,"Racing Tortoise"
-,"Racing Tortoise"
-,"Radiation Sickness"
-,"Radiation Sickness"
-,"Radioactive Avenger"
-,"Radioactive Avenger"
-,"Raging Bird"
-,"Raging Bird"
-,"Raina (Card)"
-,"Raina (Card)"
-,"Rainbow Candy"
-,"Rainbow Candy"
-,"Rainbow Girl"
-,"Rainbow Girl"
-,"Rapunzel"
-,"Rapunzel"
-,"Rat Chef"
-,"Rat Chef"
-,"Rattlesnake"
-,"Rattlesnake"
-,"Ravenica"
-,"Ravenica"
-,"Relic"
-,"Relic"
-,"Reptile"
-,"Reptile"
-,"Reptilian Ninja"
-,"Reptilian Ninja"
-,"Rex's Lab"
-,"Rex's Lab"
-,"Rhinocerous Beetle"
-,"Rhinocerous Beetle"
-,"Road Sprinter"
-,"Road Sprinter"
-,"Robo Ninja"
-,"Robo Ninja"
-,"Robot"
-,"Robot"
-,"Robot Devil"
-,"Robot Devil"
-,"Robot Turkey"
-,"Robot Turkey"
-,"Rodent"
-,"Rodent"
-,"Royal Game"
-,"Royal Game"
-,"Royalty"
-,"Royalty"
-,"Saberchilla"
-,"Saberchilla"
-,"Sai"
-,"Sai"
-,"Samurai Hero"
-,"Samurai Hero"
-,"Sand Raider"
-,"Sand Raider"
-,"Sandy (Card)"
-,"Sandy (Card)"
-,"Sci-Fi"
-,"Sci-Fi"
-,"Science"
-,"Science"
-,"Sea Monkey"
-,"Sea Monkey"
-,"Seal"
-,"Seal"
-,"Secret Passage"
-,"Secret Passage"
-,"Segmentipede"
-,"Segmentipede"
-,"Sekhmet"
-,"Sekhmet"
-,"Seraphim"
-,"Seraphim"
-,"Serpent Cultist"
-,"Serpent Cultist"
-,"Sewer Mutants"
-,"Sewer Mutants"
-,"Shade Kitten"
-,"Shade Kitten"
-,"Shadow People"
-,"Shadow People"
-,"Shadow Prelate"
-,"Shadow Prelate"
-,"Shadow Prophet"
-,"Shadow Prophet"
-,"Shapeshifter"
-,"Shapeshifter"
-,"Shattered Sword"
-,"Shattered Sword"
-,"Shoggoth"
-,"Shoggoth"
-,"Siberian Husky"
-,"Siberian Husky"
-,"Sidekick"
-,"Sidekick"
-,"Silver Bullet"
-,"Silver Bullet"
-,"Singing Raisins"
-,"Singing Raisins"
-,"Sir Lancelot"
-,"Sir Lancelot"
-,"Skeletal Dragon"
-,"Skeletal Dragon"
-,"Skeletal Isle"
-,"Skeletal Isle"
-,"Skeletal Vampire"
-,"Skeletal Vampire"
-,"Sleep"
-,"Sleep"
-,"Sleeping Princess"
-,"Sleeping Princess"
-,"Sleepwalker"
-,"Sleepwalker"
-,"Sleigh"
-,"Sleigh"
-,"Sleipnir"
-,"Sleipnir"
-,"Slithers (Card)"
-,"Slithers (Card)"
-,"Snake Charmer"
-,"Snake Charmer"
-,"Snakes in a Can"
-,"Snakes in a Can"
-,"Snapping Turtle"
-,"Snapping Turtle"
-,"Sno-Cone"
-,"Sno-Cone"
-,"Snow Angel"
-,"Snow Angel"
-,"Snowflake"
-,"Snowflake"
-,"Sonic Bat"
-,"Sonic Bat"
-,"Soul Harvester"
-,"Soul Harvester"
-,"Soul Stealer"
-,"Soul Stealer"
-,"Soy Yum Green"
-,"Soy Yum Green"
-,"Space"
-,"Space"
-,"Space Admiral"
-,"Space Admiral"
-,"Space Dog"
-,"Space Dog"
-,"Space Explorer"
-,"Space Explorer"
-,"Space Shoes"
-,"Space Shoes"
-,"Space Zombie"
-,"Space Zombie"
-,"Spaceship"
-,"Spaceship"
-,"Spectral Rider"
-,"Spectral Rider"
-,"Speed"
-,"Speed"
-,"Spencer (Card)"
-,"Spencer (Card)"
-,"Sphinx"
-,"Sphinx"
-,"Spider Mite"
-,"Spider Mite"
-,"Spirit"
-,"Spirit"
-,"Squeeze Toy Alien"
-,"Squeeze Toy Alien"
-,"Stealth Bomber"
-,"Stealth Bomber"
-,"Steel Hero"
-,"Steel Hero"
-,"Stewart (Card)"
-,"Stewart (Card)"
-,"Stinger"
-,"Stinger"
-,"Stingray"
-,"Stingray"
-,"Stonemobile"
-,"Stonemobile"
-,"Strength"
-,"Strength"
-,"Stuffed Plushie"
-,"Stuffed Plushie"
-,"Sugar Skull"
-,"Sugar Skull"
-,"Sun Burn"
-,"Sun Burn"
-,"Sunflower"
-,"Sunflower"
-,"Sunny (Card)"
-,"Sunny (Card)"
-,"Sunwalker Vampire"
-,"Sunwalker Vampire"
-,"Super Bat"
-,"Super Bat"
-,"Super Nova"
-,"Super Nova"
-,"Swarm Queen"
-,"Swarm Queen"
-,"Sweets"
-,"Sweets"
-,"Swift the Chin"
-,"Swift the Chin"
-,"Sword Prince"
-,"Sword Prince"
-,"Tale of Hot & Cold"
-,"Tale of Hot & Cold"
-,"Tawn Tawn"
-,"Tawn Tawn"
-,"Tentacled Beast"
-,"Tentacled Beast"
-,"Terrance (Card)"
-,"Terrance (Card)"
-,"The Awakener"
-,"The Awakener"
-,"The Badger"
-,"The Badger"
-,"The Chosen One"
-,"The Chosen One"
-,"The Good Giant"
-,"The Good Giant"
-,"The Magic Dresser"
-,"The Magic Dresser"
-,"The Mariner"
-,"The Mariner"
-,"The Musical Symbol"
-,"The Musical Symbol"
-,"The Ooze"
-,"The Ooze"
-,"The Ring Courier"
-,"The Ring Courier"
-,"The Snake Lord"
-,"The Snake Lord"
-,"The Talking Cricket"
-,"The Talking Cricket"
-,"Theodore (Card)"
-,"Theodore (Card)"
-,"Thomas Edison"
-,"Thomas Edison"
-,"Thor"
-,"Thor"
-,"Thor's Hammer"
-,"Thor's Hammer"
-,"Thumbelina"
-,"Thumbelina"
-,"Time"
-,"Time"
-,"Time Adventurers"
-,"Time Adventurers"
-,"Time Fairy"
-,"Time Fairy"
-,"Tinfoil Hat"
-,"Tinfoil Hat"
-,"Tombstone"
-,"Tombstone"
-,"Tooth Fairy"
-,"Tooth Fairy"
-,"Toximo 3000 (Card)"
-,"Toximo 3000 (Card)"
-,"Toy"
-,"Toy"
-,"Tranquilizer Dart"
-,"Tranquilizer Dart"
-,"Transmutation"
-,"Transmutation"
-,"Triceratops"
-,"Triceratops"
-,"True Love's Kiss"
-,"True Love's Kiss"
-,"Turkey"
-,"Turkey"
-,"Turkey Day"
-,"Turkey Day"
-,"Turtle"
-,"Turtle"
-,"Turtle Duck"
-,"Turtle Duck"
-,"Ubaid Lizardman"
-,"Ubaid Lizardman"
-,"Uncle Duck"
-,"Uncle Duck"
-,"Undead Knight"
-,"Undead Knight"
-,"Underground"
-,"Underground"
-,"Underground City"
-,"Underground City"
-,"Underwater"
-,"Underwater"
-,"Unicorn"
-,"Unicorn"
-,"USB of 999 Truths"
-,"USB of 999 Truths"
-,"Uther (Card)"
-,"Uther (Card)"
-,"Valkyrie"
-,"Valkyrie"
-,"Vampchilla"
-,"Vampchilla"
-,"Vampire Coven"
-,"Vampire Coven"
-,"Vampire Killer"
-,"Vampire Killer"
-,"Vampire Queen"
-,"Vampire Queen"
-,"Vampire Squid"
-,"Vampire Squid"
-,"Vampiric Gargoyle"
-,"Vampiric Gargoyle"
-,"Vehicle"
-,"Vehicle"
-,"Vengeful Spirit"
-,"Vengeful Spirit"
-,"Vial of Stars"
-,"Vial of Stars"
-,"Villain"
-,"Villain"
-,"Vlad (Card)"
-,"Vlad (Card)"
-,"Void Beast"
-,"Void Beast"
-,"Void Horror"
-,"Void Horror"
-,"Void Shaman"
-,"Void Shaman"
-,"Voidwalker"
-,"Voidwalker"
-,"Voodoo Doll"
-,"Voodoo Doll"
-,"War"
-,"War"
-,"War God"
-,"War God"
-,"War Turtle"
-,"War Turtle"
-,"Warlock"
-,"Warlock"
-,"Watson"
-,"Watson"
-,"Wealth"
-,"Wealth"
-,"Weapon"
-,"Weapon"
-,"Werechicken"
-,"Werechicken"
-,"Werevamp"
-,"Werevamp"
-,"White Rabbit"
-,"White Rabbit"
-,"Wight"
-,"Wight"
-,"Wind"
-,"Wind"
-,"Wind Giant"
-,"Wind Giant"
-,"Windmill of Doom"
-,"Windmill of Doom"
-,"Winter Assassin"
-,"Winter Assassin"
-,"Wisp"
-,"Wisp"
-,"Witch Doctor"
-,"Witch Doctor"
-,"Wizard Giant"
-,"Wizard Giant"
-,"Wizard Staff"
-,"Wizard Staff"
-,"Wizarding School"
-,"Wizarding School"
-,"Wolf Battering Ram"
-,"Wolf Battering Ram"
-,"Wolf in Sheep Duds"
-,"Wolf in Sheep Duds"
-,"Wonderful Chin"
-,"Wonderful Chin"
-,"World Eater"
-,"World Eater"
-,"Worship Stones"
-,"Worship Stones"
-,"Wraith Dagger"
-,"Wraith Dagger"
-,"X-Ray"
-,"X-Ray"
-,"Yeti"
-,"Yeti"
-,"Youthful Sorceress"
-,"Youthful Sorceress"
-,"Zombie Giant"
-,"Zombie Giant"
-,"Zombie Romeo"
-,"Zombie Romeo"
-,"Zombie Tank"
-,"Zombie Tank"
-,"Zombiesaur"
-,"Zombiesaur"
-,"Zugzug (Card)"
-,"Zugzug (Card)"
-,"Abyss Knight"
-,"Abyss Knight"
-,"Action Figure"
-,"Action Figure"
-,"Acupuncturist"
-,"Acupuncturist"
-,"Adventure Kid"
-,"Adventure Kid"
-,"Aeromancer"
-,"Aeromancer"
-,"AI"
-,"AI"
-,"Air Elemental"
-,"Air Elemental"
-,"Air Ship"
-,"Air Ship"
-,"Albert (Card)"
-,"Albert (Card)"
-,"Alchemist"
-,"Alchemist"
-,"Ali-Ent"
-,"Ali-Ent"
-,"Alicorn"
-,"Alicorn"
-,"Alien"
-,"Alien"
-,"Alien Beastie"
-,"Alien Beastie"
-,"Alien Dino"
-,"Alien Dino"
-,"Alien Mob Boss"
-,"Alien Mob Boss"
-,"Alien Prophet"
-,"Alien Prophet"
-,"Alpha Dragon"
-,"Alpha Dragon"
-,"Alphatron"
-,"Alphatron"
-,"Amazon"
-,"Amazon"
-,"Amphisbaena"
-,"Amphisbaena"
-,"Anaconda Snack"
-,"Anaconda Snack"
-,"Ancient Dragon"
-,"Ancient Dragon"
-,"Ancient Scrolls"
-,"Ancient Scrolls"
-,"Angel of Valor"
-,"Angel of Valor"
-,"Anglerfish"
-,"Anglerfish"
-,"Anna (Card)"
-,"Anna (Card)"
-,"Anubis"
-,"Anubis"
-,"Aphrodite"
-,"Aphrodite"
-,"Apocalypse Doctrine"
-,"Apocalypse Doctrine"
-,"Apocalypse Rider"
-,"Apocalypse Rider"
-,"Apollo"
-,"Apollo"
-,"Aquatic Alien"
-,"Aquatic Alien"
-,"Arachne"
-,"Arachne"
-,"Arachnid Dude"
-,"Arachnid Dude"
-,"Armageddon"
-,"Armageddon"
-,"Army Ant"
-,"Army Ant"
-,"Astro Droid"
-,"Astro Droid"
-,"Astro Gang"
-,"Astro Gang"
-,"Atlantis"
-,"Atlantis"
-,"Attractive Brain"
-,"Attractive Brain"
-,"Austrian Spiketrail"
-,"Austrian Spiketrail"
-,"Bahamut"
-,"Bahamut"
-,"Banshee Empress"
-,"Banshee Empress"
-,"Barbarian"
-,"Barbarian"
-,"Barrel Gorilla"
-,"Barrel Gorilla"
-,"Barrel Gorilla Jr"
-,"Barrel Gorilla Jr"
-,"Basilisk"
-,"Basilisk"
-,"Battle Prodigy"
-,"Battle Prodigy"
-,"Beanstalk Giant"
-,"Beanstalk Giant"
-,"Bed Bug"
-,"Bed Bug"
-,"Belphegor"
-,"Belphegor"
-,"Berserker"
-,"Berserker"
-,"Big Bad Wolf"
-,"Big Bad Wolf"
-,"Bionic Unicorn"
-,"Bionic Unicorn"
-,"Black Death"
-,"Black Death"
-,"Black Friday"
-,"Black Friday"
-,"Black Widow"
-,"Black Widow"
-,"Blood Angel"
-,"Blood Angel"
-,"Blood Bath"
-,"Blood Bath"
-,"Blood Bros"
-,"Blood Bros"
-,"Blood Mage"
-,"Blood Mage"
-,"Blood Moon"
-,"Blood Moon"
-,"Bloody Mary"
-,"Bloody Mary"
-,"Bloody Prom Queen"
-,"Bloody Prom Queen"
-,"Blue Bull"
-,"Blue Bull"
-,"Bogeyman"
-,"Bogeyman"
-,"Bomb Shelter"
-,"Bomb Shelter"
-,"Bone Chin"
-,"Bone Chin"
-,"Bone Golem"
-,"Bone Golem"
-,"Bonsai"
-,"Bonsai"
-,"Bouncy Bears"
-,"Bouncy Bears"
-,"Bounty Hunter Clone"
-,"Bounty Hunter Clone"
-,"Box Special Forces"
-,"Box Special Forces"
-,"Brain Warlord"
-,"Brain Warlord"
-,"Broham"
-,"Broham"
-,"Bubbles"
-,"Bubbles"
-,"Bumpy Princess"
-,"Bumpy Princess"
-,"Burgerlar"
-,"Burgerlar"
-,"Burgermobile"
-,"Burgermobile"
-,"Cactus Demon"
-,"Cactus Demon"
-,"Candy King Chin"
-,"Candy King Chin"
-,"Candy Nation"
-,"Candy Nation"
-,"Cannon Boy"
-,"Cannon Boy"
-,"Carver of Doom"
-,"Carver of Doom"
-,"Cat Nap"
-,"Cat Nap"
-,"Catron"
-,"Catron"
-,"Cavities"
-,"Cavities"
-,"Celestial Trees"
-,"Celestial Trees"
-,"Centennial Eagle"
-,"Centennial Eagle"
-,"Cerberus"
-,"Cerberus"
-,"Ceryneian Hind"
-,"Ceryneian Hind"
-,"Charon"
-,"Charon"
-,"Charybdis"
-,"Charybdis"
-,"Chemistry Set"
-,"Chemistry Set"
-,"Cheshire Cat"
-,"Cheshire Cat"
-,"Chin Cousteau"
-,"Chin Cousteau"
-,"Chin Trooper"
-,"Chin Trooper"
-,"Chiropterang"
-,"Chiropterang"
-,"Chiroptercar"
-,"Chiroptercar"
-,"Chocolate Lizards"
-,"Chocolate Lizards"
-,"Christmas Tree"
-,"Christmas Tree"
-,"Cloud Rider"
-,"Cloud Rider"
-,"Clown Car"
-,"Clown Car"
-,"Clown Toxin"
-,"Clown Toxin"
-,"Cobramon"
-,"Cobramon"
-,"Cockatrice"
-,"Cockatrice"
-,"Colossal Demon"
-,"Colossal Demon"
-,"Computer Bug"
-,"Computer Bug"
-,"Cookie Beast"
-,"Cookie Beast"
-,"Corrosive Rust"
-,"Corrosive Rust"
-,"Courageous Founder"
-,"Courageous Founder"
-,"Cranky Knight"
-,"Cranky Knight"
-,"Crazy Eyed Wizard"
-,"Crazy Eyed Wizard"
-,"Crimson Witch"
-,"Crimson Witch"
-,"Crow Revenant"
-,"Crow Revenant"
-,"Crusader"
-,"Crusader"
-,"Crying Angel"
-,"Crying Angel"
-,"Cryosleep"
-,"Cryosleep"
-,"Crypt Explorer"
-,"Crypt Explorer"
-,"Cupid"
-,"Cupid"
-,"Cupid's Bow"
-,"Cupid's Bow"
-,"Cursed Flute"
-,"Cursed Flute"
-,"Cursed Garden"
-,"Cursed Garden"
-,"Cursed Will"
-,"Cursed Will"
-,"Cyberwolf"
-,"Cyberwolf"
-,"Cyborg"
-,"Cyborg"
-,"Cyclone"
-,"Cyclone"
-,"Cyclops"
-,"Cyclops"
-,"Cymbal Monkey"
-,"Cymbal Monkey"
-,"D-3000"
-,"D-3000"
-,"Dark Apprentice"
-,"Dark Apprentice"
-,"Dark Elf"
-,"Dark Elf"
-,"Dark Sage Master"
-,"Dark Sage Master"
-,"Dark Soul Vessels"
-,"Dark Soul Vessels"
-,"Dark Space Lord"
-,"Dark Space Lord"
-,"Dark Swan"
-,"Dark Swan"
-,"Davy Jones"
-,"Davy Jones"
-,"Death Ray"
-,"Death Ray"
-,"Death's Gift"
-,"Death's Gift"
-,"Decimation"
-,"Decimation"
-,"Delusional Psychic"
-,"Delusional Psychic"
-,"Demon Hero"
-,"Demon Hero"
-,"Demonic Bike"
-,"Demonic Bike"
-,"Demonic Elf"
-,"Demonic Elf"
-,"Desert Pirate"
-,"Desert Pirate"
-,"Desert Shrew"
-,"Desert Shrew"
-,"Diamond Ring"
-,"Diamond Ring"
-,"Diamond Sword"
-,"Diamond Sword"
-,"Dinaggro"
-,"Dinaggro"
-,"Dino Companion"
-,"Dino Companion"
-,"Dino Hybrid"
-,"Dino Hybrid"
-,"Dino Park"
-,"Dino Park"
-,"Dire Bear"
-,"Dire Bear"
-,"Divine Healer"
-,"Divine Healer"
-,"Doll"
-,"Doll"
-,"Doomed Giant"
-,"Doomed Giant"
-,"Dr. Eggdude"
-,"Dr. Eggdude"
-,"Dr. Frankenstein"
-,"Dr. Frankenstein"
-,"Dr. Radiation"
-,"Dr. Radiation"
-,"Dr. Savage"
-,"Dr. Savage"
-,"Dr. What"
-,"Dr. What"
-,"Dragon Cannon"
-,"Dragon Cannon"
-,"Dragon Fire"
-,"Dragon Fire"
-,"Dragon Incarnate"
-,"Dragon Incarnate"
-,"Dragon Mother"
-,"Dragon Mother"
-,"Dragon Princess"
-,"Dragon Princess"
-,"Dragon Turtle"
-,"Dragon Turtle"
-,"Dragonfly"
-,"Dragonfly"
-,"Dragonkin"
-,"Dragonkin"
-,"Dragonkin Ninja"
-,"Dragonkin Ninja"
-,"Dreidel"
-,"Dreidel"
-,"Droid Commander"
-,"Droid Commander"
-,"Dull Jack"
-,"Dull Jack"
-,"Eagle Rider"
-,"Eagle Rider"
-,"Ed Handytool"
-,"Ed Handytool"
-,"Einstein"
-,"Einstein"
-,"Electric Eel"
-,"Electric Eel"
-,"Elemental Stones"
-,"Elemental Stones"
-,"Elf Baker"
-,"Elf Baker"
-,"Elf Warrior"
-,"Elf Warrior"
-,"Ella (Card)"
-,"Ella (Card)"
-,"Ember"
-,"Ember"
-,"Emok"
-,"Emok"
-,"Entropic Magic"
-,"Entropic Magic"
-,"EZ Cake Oven"
-,"EZ Cake Oven"
-,"Fair Princess"
-,"Fair Princess"
-,"Fairy Godmouse"
-,"Fairy Godmouse"
-,"Fat Cat"
-,"Fat Cat"
-,"Fat King"
-,"Fat King"
-,"Fiery Shadow Demon"
-,"Fiery Shadow Demon"
-,"Fighting Champion"
-,"Fighting Champion"
-,"Fire Candy"
-,"Fire Candy"
-,"Fire Lord"
-,"Fire Lord"
-,"Fire Sigil"
-,"Fire Sigil"
-,"Firebird Force"
-,"Firebird Force"
-,"Fireblood Dragon"
-,"Fireblood Dragon"
-,"Firemaster Rooku"
-,"Firemaster Rooku"
-,"Fish Bone"
-,"Fish Bone"
-,"Flapjack Octopus"
-,"Flapjack Octopus"
-,"Flea"
-,"Flea"
-,"Fluff Puff"
-,"Fluff Puff"
-,"Flying Goblin"
-,"Flying Goblin"
-,"Food Squad"
-,"Food Squad"
-,"Forest Chinchillas"
-,"Forest Chinchillas"
-,"Forest Elf"
-,"Forest Elf"
-,"Fortune Teller"
-,"Fortune Teller"
-,"Fossil"
-,"Fossil"
-,"Fountain of Youth"
-,"Fountain of Youth"
-,"Francois (Card)"
-,"Francois (Card)"
-,"Frankenstein"
-,"Frankenstein"
-,"Frost Dragon"
-,"Frost Dragon"
-,"Frost Giant"
-,"Frost Giant"
-,"Frost Mage"
-,"Frost Mage"
-,"Frost Wolf"
-,"Frost Wolf"
-,"Frostwing"
-,"Frostwing"
-,"Furies"
-,"Furies"
-,"Fused Martial Artists"
-,"Fused Martial Artists"
-,"Galactic Wizard"
-,"Galactic Wizard"
-,"Gas Mask Soldier"
-,"Gas Mask Soldier"
-,"Gashadokuro"
-,"Gashadokuro"
-,"Gelmancer"
-,"Gelmancer"
-,"Gem"
-,"Gem"
-,"General Viper"
-,"General Viper"
-,"Genie"
-,"Genie"
-,"Ghost Army"
-,"Ghost Army"
-,"Ghost Trapper"
-,"Ghost Trapper"
-,"God Hammer"
-,"God Hammer"
-,"Goddess Pele"
-,"Goddess Pele"
-,"Golden Construct"
-,"Golden Construct"
-,"Goldilocks and Bears"
-,"Goldilocks and Bears"
-,"Grasshopper"
-,"Grasshopper"
-,"Gray Goo"
-,"Gray Goo"
-,"Great Wereape"
-,"Great Wereape"
-,"Greed"
-,"Greed"
-,"Green Eyed Monster"
-,"Green Eyed Monster"
-,"Griffin"
-,"Griffin"
-,"Grouchy Monster"
-,"Grouchy Monster"
-,"Gummy Bear"
-,"Gummy Bear"
-,"Gunfu Cleric"
-,"Gunfu Cleric"
-,"Gunslinger"
-,"Gunslinger"
-,"Hades"
-,"Hades"
-,"Hairy Smuggler"
-,"Hairy Smuggler"
-,"Half-Life"
-,"Half-Life"
-,"Hammer Sword"
-,"Hammer Sword"
-,"Hammer Time"
-,"Hammer Time"
-,"Hammerhead Shark"
-,"Hammerhead Shark"
-,"Hammertron"
-,"Hammertron"
-,"Hangry"
-,"Hangry"
-,"Hangry Meal"
-,"Hangry Meal"
-,"Harpy"
-,"Harpy"
-,"Harvest"
-,"Harvest"
-,"Haunted Armor"
-,"Haunted Armor"
-,"Heavens"
-,"Heavens"
-,"Hermes"
-,"Hermes"
-,"Hero League"
-,"Hero League"
-,"High Tide"
-,"High Tide"
-,"Horn of Man"
-,"Horn of Man"
-,"Horned Serpent"
-,"Horned Serpent"
-,"Hot Pepper"
-,"Hot Pepper"
-,"Hug-o-Tron"
-,"Hug-o-Tron"
-,"Hugging Alien"
-,"Hugging Alien"
-,"Human Battery"
-,"Human Battery"
-,"Hungry Coyote"
-,"Hungry Coyote"
-,"Hungry Panda Hero"
-,"Hungry Panda Hero"
-,"Hypnotic Python"
-,"Hypnotic Python"
-,"Hypnotic Singer"
-,"Hypnotic Singer"
-,"Ice Age"
-,"Ice Age"
-,"Ice Carrier"
-,"Ice Carrier"
-,"Ice Dude"
-,"Ice Dude"
-,"Ice King"
-,"Ice King"
-,"Ice Zombie King"
-,"Ice Zombie King"
-,"Ifrit"
-,"Ifrit"
-,"Igor"
-,"Igor"
-,"Immortal"
-,"Immortal"
-,"Immovable Object"
-,"Immovable Object"
-,"Insect Man"
-,"Insect Man"
-,"Jack and Beanstalk"
-,"Jack and Beanstalk"
-,"Jack Anger"
-,"Jack Anger"
-,"Jack the Dog"
-,"Jack the Dog"
-,"Jaeger"
-,"Jaeger"
-,"Jama"
-,"Jama"
-,"Jester Sidekick"
-,"Jester Sidekick"
-,"Jumping Hero"
-,"Jumping Hero"
-,"K-9000"
-,"K-9000"
-,"Kappa"
-,"Kappa"
-,"Kid Sidekick"
-,"Kid Sidekick"
-,"King Arthur"
-,"King Arthur"
-,"King Killer"
-,"King Killer"
-,"Koala"
-,"Koala"
-,"Kongar"
-,"Kongar"
-,"Koo Koo Nuts"
-,"Koo Koo Nuts"
-,"Kung Fu Zombie"
-,"Kung Fu Zombie"
-,"Laser"
-,"Laser"
-,"Laser Shark"
-,"Laser Shark"
-,"Last Stand"
-,"Last Stand"
-,"Leopold (Card)"
-,"Leopold (Card)"
-,"Lich Blade"
-,"Lich Blade"
-,"Lieutenant USA"
-,"Lieutenant USA"
-,"Lion"
-,"Lion"
-,"Living Algorithm"
-,"Living Algorithm"
-,"Lizard Rider"
-,"Lizard Rider"
-,"Lord of Horses"
-,"Lord of Horses"
-,"Love Potion"
-,"Love Potion"
-,"Lucy (Card)"
-,"Lucy (Card)"
-,"Lunar Priest"
-,"Lunar Priest"
-,"Lunara"
-,"Lunara"
-,"Lycan King"
-,"Lycan King"
-,"Macho Alien"
-,"Macho Alien"
-,"Mad Bomber"
-,"Mad Bomber"
-,"Mad Hatter"
-,"Mad Hatter"
-,"Maelstrom"
-,"Maelstrom"
-,"Magical Soccer"
-,"Magical Soccer"
-,"Magnet Dude"
-,"Magnet Dude"
-,"Malevolent"
-,"Malevolent"
-,"Mama Bear"
-,"Mama Bear"
-,"Mana Drainer"
-,"Mana Drainer"
-,"Mandrake"
-,"Mandrake"
-,"Maneaters"
-,"Maneaters"
-,"Manticore"
-,"Manticore"
-,"Mantis Shrimp"
-,"Mantis Shrimp"
-,"Masked Killer"
-,"Masked Killer"
-,"Masked Swordsman"
-,"Masked Swordsman"
-,"Master Alchemist"
-,"Master Alchemist"
-,"Master Y"
-,"Master Y"
-,"Master's Apprentice"
-,"Master's Apprentice"
-,"Mayflower"
-,"Mayflower"
-,"Mecha Bear"
-,"Mecha Bear"
-,"Mecha Monkey"
-,"Mecha Monkey"
-,"Mechanical Knight"
-,"Mechanical Knight"
-,"Medic"
-,"Medic"
-,"Meowmon"
-,"Meowmon"
-,"Merlin"
-,"Merlin"
-,"Mermaid Princess"
-,"Mermaid Princess"
-,"Meteorite Sword"
-,"Meteorite Sword"
-,"Microraptor"
-,"Microraptor"
-,"Miles (Card)"
-,"Miles (Card)"
-,"Mind Control Device"
-,"Mind Control Device"
-,"Mind Jewel"
-,"Mind Jewel"
-,"Mind Slug"
-,"Mind Slug"
-,"Mini Clone"
-,"Mini Clone"
-,"Minotaur"
-,"Minotaur"
-,"Mister Sandman"
-,"Mister Sandman"
-,"Monkey King"
-,"Monkey King"
-,"Monkey Planet"
-,"Monkey Planet"
-,"Monster Collector"
-,"Monster Collector"
-,"Monster Slayer"
-,"Monster Slayer"
-,"Moocher"
-,"Moocher"
-,"Moon Golem"
-,"Moon Golem"
-,"Moon Heroine"
-,"Moon Heroine"
-,"Moonflare"
-,"Moonflare"
-,"Morgana"
-,"Morgana"
-,"Morphed Beast"
-,"Morphed Beast"
-,"Mountain Giant"
-,"Mountain Giant"
-,"Mouse Hero"
-,"Mouse Hero"
-,"Mozart Chin"
-,"Mozart Chin"
-,"Mr. Beetleson"
-,"Mr. Beetleson"
-,"Mr. Clown"
-,"Mr. Clown"
-,"Mr. Pimm (Card)"
-,"Mr. Pimm (Card)"
-,"Multi Dream"
-,"Multi Dream"
-,"Murder of Crows"
-,"Murder of Crows"
-,"Mutant Destroyer"
-,"Mutant Destroyer"
-,"Mutated Rhino"
-,"Mutated Rhino"
-,"My Mini Horse"
-,"My Mini Horse"
-,"Nanobots"
-,"Nanobots"
-,"Narwhal"
-,"Narwhal"
-,"Necrocomicon"
-,"Necrocomicon"
-,"Nephilim"
-,"Nephilim"
-,"Nerdy Wizard"
-,"Nerdy Wizard"
-,"Nightmare Stalker"
-,"Nightmare Stalker"
-,"Nine Tailed Fox"
-,"Nine Tailed Fox"
-,"Ninja Doge"
-,"Ninja Doge"
-,"Ninja Sorcerer"
-,"Ninja Sorcerer"
-,"Northern King"
-,"Northern King"
-,"Oberon"
-,"Oberon"
-,"Octopus"
-,"Octopus"
-,"Omni Igniter"
-,"Omni Igniter"
-,"Oozer"
-,"Oozer"
-,"Orpheus"
-,"Orpheus"
-,"Ouroboros"
-,"Ouroboros"
-,"Outlandish Royalty"
-,"Outlandish Royalty"
-,"Outrealm Warlord"
-,"Outrealm Warlord"
-,"Pan"
-,"Pan"
-,"Panda"
-,"Panda"
-,"Pandora's Box"
-,"Pandora's Box"
-,"Panther Hero"
-,"Panther Hero"
-,"Paradox"
-,"Paradox"
-,"Parasite Hunter"
-,"Parasite Hunter"
-,"Pastry Cat"
-,"Pastry Cat"
-,"PB & Jelly Time"
-,"PB & Jelly Time"
-,"Persephone"
-,"Persephone"
-,"Persian Royalty"
-,"Persian Royalty"
-,"Pestilence"
-,"Pestilence"
-,"Pet Plant"
-,"Pet Plant"
-,"Pied Piper"
-,"Pied Piper"
-,"Pikamon"
-,"Pikamon"
-,"Pilgrim"
-,"Pilgrim"
-,"Pilgrim Chin"
-,"Pilgrim Chin"
-,"Pinata"
-,"Pinata"
-,"Pinch"
-,"Pinch"
-,"Pirate Booty"
-,"Pirate Booty"
-,"Plague Dragon"
-,"Plague Dragon"
-,"Plague Monstrosity"
-,"Plague Monstrosity"
-,"Plant Clones"
-,"Plant Clones"
-,"Plant Dragon"
-,"Plant Dragon"
-,"Plant Fatale"
-,"Plant Fatale"
-,"Plantasaur"
-,"Plantasaur"
-,"Plasma Sword"
-,"Plasma Sword"
-,"Poison Oak"
-,"Poison Oak"
-,"Poisonous Porcupine"
-,"Poisonous Porcupine"
-,"Poisonous Prince"
-,"Poisonous Prince"
-,"Polaris Knuckles"
-,"Polaris Knuckles"
-,"Posession"
-,"Posession"
-,"Primeval Turtle"
-,"Primeval Turtle"
-,"Professor Pine"
-,"Professor Pine"
-,"Professor Werewolf"
-,"Professor Werewolf"
-,"Prometheus"
-,"Prometheus"
-,"Psychic Elementalist"
-,"Psychic Elementalist"
-,"Psychotic Clown"
-,"Psychotic Clown"
-,"Pumpkin Prince"
-,"Pumpkin Prince"
-,"Punchy"
-,"Punchy"
-,"Pup"
-,"Pup"
-,"Puppy Love"
-,"Puppy Love"
-,"Puzzle Master"
-,"Puzzle Master"
-,"Pygmy Jerboa"
-,"Pygmy Jerboa"
-,"Quack Doctor"
-,"Quack Doctor"
-,"Quadforce"
-,"Quadforce"
-,"Queen Bee"
-,"Queen Bee"
-,"Queen of Hearts"
-,"Queen of Hearts"
-,"Quicksand"
-,"Quicksand"
-,"Raccoon Guardian"
-,"Raccoon Guardian"
-,"Raging Gamer"
-,"Raging Gamer"
-,"Ram Hammer"
-,"Ram Hammer"
-,"Raptorbot"
-,"Raptorbot"
-,"Rat Reaper"
-,"Rat Reaper"
-,"Ratatoskr"
-,"Ratatoskr"
-,"Rebel Space Princess"
-,"Rebel Space Princess"
-,"Red Violin"
-,"Red Violin"
-,"Ring Lord"
-,"Ring Lord"
-,"Rip Van Winkle"
-,"Rip Van Winkle"
-,"Road Rage"
-,"Road Rage"
-,"Robert Sponge"
-,"Robert Sponge"
-,"Robin Hood"
-,"Robin Hood"
-,"Robot King"
-,"Robot King"
-,"Robotic Toy"
-,"Robotic Toy"
-,"Rock Dragon"
-,"Rock Dragon"
-,"Rudolph"
-,"Rudolph"
-,"Rumpelstiltskin"
-,"Rumpelstiltskin"
-,"Sabertooth Cat"
-,"Sabertooth Cat"
-,"Sand Warrior"
-,"Sand Warrior"
-,"Sandman"
-,"Sandman"
-,"Sandstorm"
-,"Sandstorm"
-,"Santa Claus"
-,"Santa Claus"
-,"Santa's Helper"
-,"Santa's Helper"
-,"Sarcastic Hero"
-,"Sarcastic Hero"
-,"Scarecrow"
-,"Scarecrow"
-,"Scorpion Lord"
-,"Scorpion Lord"
-,"Scylla"
-,"Scylla"
-,"Sea Dog"
-,"Sea Dog"
-,"Sea Giant"
-,"Sea Giant"
-,"Sea Witch"
-,"Sea Witch"
-,"Sensei Rat"
-,"Sensei Rat"
-,"Sergeant Arnold"
-,"Sergeant Arnold"
-,"Shapeshifting Chief"
-,"Shapeshifting Chief"
-,"Shark Rider"
-,"Shark Rider"
-,"Sharkstorm"
-,"Sharkstorm"
-,"Shifting Mutant"
-,"Shifting Mutant"
-,"Shrunken Head"
-,"Shrunken Head"
-,"Sinister Gourdling"
-,"Sinister Gourdling"
-,"Siphoning Belle"
-,"Siphoning Belle"
-,"Siren"
-,"Siren"
-,"Skeletal Horse"
-,"Skeletal Horse"
-,"Skeletal Worm"
-,"Skeletal Worm"
-,"Skeleton Overlord"
-,"Skeleton Overlord"
-,"Skull Smasher"
-,"Skull Smasher"
-,"Slime Warrior"
-,"Slime Warrior"
-,"Smog Horror"
-,"Smog Horror"
-,"Smoke Screen"
-,"Smoke Screen"
-,"Smug"
-,"Smug"
-,"Snake Oil Salesman"
-,"Snake Oil Salesman"
-,"Sniper"
-,"Sniper"
-,"Snoring Monster"
-,"Snoring Monster"
-,"Snowman"
-,"Snowman"
-,"Space Elf"
-,"Space Elf"
-,"Space Ghosts"
-,"Space Ghosts"
-,"Space Guardian"
-,"Space Guardian"
-,"Space Moth"
-,"Space Moth"
-,"Sparkling Vampire"
-,"Sparkling Vampire"
-,"Specter"
-,"Specter"
-,"Spectral Dragon"
-,"Spectral Dragon"
-,"Spectre Ninja"
-,"Spectre Ninja"
-,"Speed Demon"
-,"Speed Demon"
-,"Spider Mine"
-,"Spider Mine"
-,"Spirit Bear"
-,"Spirit Bear"
-,"Spirit Wolf"
-,"Spirit Wolf"
-,"Spooky Tree"
-,"Spooky Tree"
-,"Spork of Doom"
-,"Spork of Doom"
-,"Squirt Gun"
-,"Squirt Gun"
-,"Static Beast"
-,"Static Beast"
-,"Steamroller"
-,"Steamroller"
-,"Stockbroker Wolf"
-,"Stockbroker Wolf"
-,"Stonescale"
-,"Stonescale"
-,"Stormcat"
-,"Stormcat"
-,"Stymphalian Bird"
-,"Stymphalian Bird"
-,"Sugar Demon"
-,"Sugar Demon"
-,"Super Martial Artist"
-,"Super Martial Artist"
-,"Superpowered Girls"
-,"Superpowered Girls"
-,"Surfer Dude"
-,"Surfer Dude"
-,"Swamp Monster"
-,"Swamp Monster"
-,"Swordfish"
-,"Swordfish"
-,"Talos"
-,"Talos"
-,"Tank"
-,"Tank"
-,"Tarrasque"
-,"Tarrasque"
-,"Teleporting Acrobat"
-,"Teleporting Acrobat"
-,"Tempest"
-,"Tempest"
-,"Terracotta Army"
-,"Terracotta Army"
-,"Terror Bird"
-,"Terror Bird"
-,"The Bone King"
-,"The Bone King"
-,"The Boy Wizard"
-,"The Boy Wizard"
-,"The Brown Druid"
-,"The Brown Druid"
-,"The Cursed Chosen"
-,"The Cursed Chosen"
-,"The Dash"
-,"The Dash"
-,"The Deranged King"
-,"The Deranged King"
-,"The Grater"
-,"The Grater"
-,"The Huntsman"
-,"The Huntsman"
-,"The Lone Wolf"
-,"The Lone Wolf"
-,"The Mole King"
-,"The Mole King"
-,"The Ranger"
-,"The Ranger"
-,"Three Wise Monkeys"
-,"Three Wise Monkeys"
-,"Thrilling Zombie"
-,"Thrilling Zombie"
-,"Thunder God"
-,"Thunder God"
-,"Thunderbird"
-,"Thunderbird"
-,"Time Machine"
-,"Time Machine"
-,"Tin Man"
-,"Tin Man"
-,"Titan of Death"
-,"Titan of Death"
-,"Titan of Destruction"
-,"Titan of Destruction"
-,"Tomb Keeper"
-,"Tomb Keeper"
-,"Tongue Parasite"
-,"Tongue Parasite"
-,"Transformobot"
-,"Transformobot"
-,"Trapper-1"
-,"Trapper-1"
-,"Treacherous Wizard"
-,"Treacherous Wizard"
-,"Trick or Treater"
-,"Trick or Treater"
-,"Trojan Horse"
-,"Trojan Horse"
-,"Troll"
-,"Troll"
-,"Turkey Zombie"
-,"Turkey Zombie"
-,"Turkeyzilla"
-,"Turkeyzilla"
-,"Turtle Drummer"
-,"Turtle Drummer"
-,"Turtle Golem"
-,"Turtle Golem"
-,"Turtle King"
-,"Turtle King"
-,"Turtle Sorcerer"
-,"Turtle Sorcerer"
-,"Turtle Warrior"
-,"Turtle Warrior"
-,"Ultimate Soldier"
-,"Ultimate Soldier"
-,"Undead Bride"
-,"Undead Bride"
-,"Undead Slime"
-,"Undead Slime"
-,"Unicorn Blood"
-,"Unicorn Blood"
-,"Unstoppable Force"
-,"Unstoppable Force"
-,"Vamp Crunch"
-,"Vamp Crunch"
-,"Vampire Assassin"
-,"Vampire Assassin"
-,"Vampire Boogie Man"
-,"Vampire Boogie Man"
-,"Vampire Knight"
-,"Vampire Knight"
-,"Vegas Magicians"
-,"Vegas Magicians"
-,"Vera (Card)"
-,"Vera (Card)"
-,"Video Game"
-,"Video Game"
-,"Villain Groupies"
-,"Villain Groupies"
-,"Viral Agent"
-,"Viral Agent"
-,"Virus"
-,"Virus"
-,"W Space Fighter"
-,"W Space Fighter"
-,"War Bear"
-,"War Bear"
-,"War Drummer"
-,"War Drummer"
-,"Water Bear"
-,"Water Bear"
-,"Water Dragon"
-,"Water Dragon"
-,"Watermaster Cora"
-,"Watermaster Cora"
-,"Werebear"
-,"Werebear"
-,"White Dwarf"
-,"White Dwarf"
-,"Wind Princess"
-,"Wind Princess"
-,"Windmaster Eng"
-,"Windmaster Eng"
-,"Wise Owl"
-,"Wise Owl"
-,"Witch's Brew"
-,"Witch's Brew"
-,"Wizard Headmaster"
-,"Wizard Headmaster"
-,"WMD"
-,"WMD"
-,"Wolf Warrior"
-,"Wolf Warrior"
-,"World Turtle"
-,"World Turtle"
-,"Wormhole"
-,"Wormhole"
-,"Wraith"
-,"Wraith"
-,"Xanthar (Card)"
-,"Xanthar (Card)"
-,"Xenomorph"
-,"Xenomorph"
-,"Young Wolf"
-,"Young Wolf"
-,"Zantar"
-,"Zantar"
-,"Zeus"
-,"Zeus"
-,"Ziz"
-,"Ziz"
-,"Zombie Bear"
-,"Zombie Bear"
-,"Zombie Chipmunk"
-,"Zombie Chipmunk"
-,"Zombie Fungus"
-,"Zombie Fungus"
-,"Zombie Hunter"
-,"Zombie Hunter"
-,"Zombie Outbreak"
-,"Zombie Outbreak"
-,"Angel (Onyx)"
-,"Angel (Onyx)"
-,"Ash (Onyx)"
-,"Ash (Onyx)"
-,"Bat (Onyx)"
-,"Bat (Onyx)"
-,"Bear (Onyx)"
-,"Bear (Onyx)"
-,"Chinchilla (Onyx)"
-,"Chinchilla (Onyx)"
-,"Death (Onyx)"
-,"Death (Onyx)"
-,"Demon (Onyx)"
-,"Demon (Onyx)"
-,"Dragon (Onyx)"
-,"Dragon (Onyx)"
-,"Earth (Onyx)"
-,"Earth (Onyx)"
-,"Elf (Onyx)"
-,"Elf (Onyx)"
-,"Energy (Onyx)"
-,"Energy (Onyx)"
-,"Fairy (Onyx)"
-,"Fairy (Onyx)"
-,"Fairy Tale (Onyx)"
-,"Fairy Tale (Onyx)"
-,"Fire (Onyx)"
-,"Fire (Onyx)"
-,"Food (Onyx)"
-,"Food (Onyx)"
-,"Golem (Onyx)"
-,"Golem (Onyx)"
-,"Hammer (Onyx)"
-,"Hammer (Onyx)"
-,"Holy Water (Onyx)"
-,"Holy Water (Onyx)"
-,"Horse (Onyx)"
-,"Horse (Onyx)"
-,"Human (Onyx)"
-,"Human (Onyx)"
-,"Insect (Onyx)"
-,"Insect (Onyx)"
-,"Invention (Onyx)"
-,"Knight (Onyx)"
-,"Knight (Onyx)"
-,"Knowledge (Onyx)"
-,"Knowledge (Onyx)"
-,"Leader (Onyx)"
-,"Leader (Onyx)"
-,"Life (Onyx)"
-,"Life (Onyx)"
-,"Magic (Onyx)"
-,"Magic (Onyx)"
-,"Metal (Onyx)"
-,"Metal (Onyx)"
-,"Monster (Onyx)"
-,"Monster (Onyx)"
-,"Poison (Onyx)"
-,"Poison (Onyx)"
-,"Prehistoric (Onyx)"
-,"Prehistoric (Onyx)"
-,"Radiation (Onyx)"
-,"Radiation (Onyx)"
-,"Rainbow (Onyx)"
-,"Rainbow (Onyx)"
-,"Sci-Fi (Onyx)"
-,"Sci-Fi (Onyx)"
-,"Science (Onyx)"
-,"Science (Onyx)"
-,"Snake (Onyx)"
-,"Snake (Onyx)"
-,"Space (Onyx)"
-,"Space (Onyx)"
-,"Spirit (Onyx)"
-,"Spirit (Onyx)"
-,"Strength (Onyx)"
-,"Strength (Onyx)"
-,"Sun (Onyx)"
-,"Sun (Onyx)"
-,"Superhero (Onyx)"
-,"Superhero (Onyx)"
-,"Sword (Onyx)"
-,"Sword (Onyx)"
-,"Time (Onyx)"
-,"Time (Onyx)"
-,"Toy (Onyx)"
-,"Toy (Onyx)"
-,"Tree (Onyx)"
-,"Tree (Onyx)"
-,"Trident (Onyx)"
-,"Trident (Onyx)"
-,"Undead (Onyx)"
-,"Undead (Onyx)"
-,"Vampire (Onyx)"
-,"Vampire (Onyx)"
-,"Villain (Onyx)"
-,"Villain (Onyx)"
-,"Void (Onyx)"
-,"Void (Onyx)"
-,"Water (Onyx)"
-,"Water (Onyx)"
-,"Water Serpent (Onyx)"
-,"Water Serpent (Onyx)"
-,"Werewolf (Onyx)"
-,"Werewolf (Onyx)"
-,"Wind (Onyx)"
-,"Wind (Onyx)"
-,"Wings (Onyx)"
-,"Wings (Onyx)"
-,"Wizard (Onyx)"
-,"Wizard (Onyx)"
-,"Wolf (Onyx)"
-,"Wolf (Onyx)"]
+cards = [
+    "AI",
+    "AL 9001",
+    "Absolute Zero",
+    "Abyss Knight",
+    "Action Figure",
+    "Acupuncturist",
+    "Adventure Kid",
+    "Aeromancer",
+    "Affliction",
+    "Air Elemental",
+    "Air Ship",
+    "Air Sprite",
+    "Albert (Card)",
+    "Alchemist",
+    "Ali-Ent",
+    "Alicorn",
+    "Alien",
+    "Alien Band",
+    "Alien Beastie",
+    "Alien Dino",
+    "Alien Human Hybrid",
+    "Alien Intruders",
+    "Alien Mob Boss",
+    "Alien Prophet",
+    "Alien Reptile",
+    "Alien Sorceress",
+    "Alpha",
+    "Alpha Dragon",
+    "Alphatron",
+    "Amazon",
+    "Amphisbaena",
+    "Anaconda",
+    "Anaconda Snack",
+    "Ancient Ark",
+    "Ancient Dragon",
+    "Ancient Scrolls",
+    "Angel",
+    "Angel Food Cake",
+    "Angel Kid",
+    "Angel Trumpeter",
+    "Angel of Valor",
+    "Angel of Wisdom",
+    "Angel of Wrath",
+    "Angelfish",
+    "Angelic Mutant",
+    "Anger",
+    "Anglerfish",
+    "Angry Bride",
+    "Angry Mob",
+    "Animal Whisperer",
+    "Anna (Card)",
+    "Anubis",
+    "Ape Lost City",
+    "Aphrodite",
+    "Apocalypse",
+    "Apocalypse Doctrine",
+    "Apocalypse Rider",
+    "Apollo",
+    "Aquatic Alien",
+    "Arachne",
+    "Arachnid Dude",
+    "Arcade",
+    "Arch Angel",
+    "Arch Mage",
+    "Ares",
+    "Ariel (Card)",
+    "Arm Parasite",
+    "Armageddon",
+    "Armored Dragon",
+    "Army Ant",
+    "Ash",
+    "Ash (Onyx)",
+    "Assassin",
+    "Astro Droid",
+    "Astro Gang",
+    "Astronaut",
+    "Atlantis",
+    "Atlas",
+    "Attractive Brain",
+    "Aurora",
+    "Austrian Spiketrail",
+    "Auto Champion",
+    "Avalanche",
+    "Avery (Card)",
+    "Aviator Chin",
+    "Baby New Year",
+    "Bahamut",
+    "Ball Companion",
+    "Banshee Empress",
+    "Bard",
+    "Barrel Gorilla",
+    "Barrel Gorilla Jr",
+    "Baseball Bat",
+    "Basilisk",
+    "Bastion",
+    "Bat",
+    "Bat (Onyx)",
+    "Battle Mage",
+    "Battle Prodigy",
+    "Beanstalk Giant",
+    "Bear",
+    "Bear (Onyx)",
+    "Bear Dog",
+    "Bear Magus",
+    "Beauty",
+    "Beaver",
+    "Bed Bug",
+    "Beguiling Android",
+    "Belphegor",
+    "Berserker",
+    "Big Bad Wolf",
+    "Big Foot",
+    "Bill (Card)",
+    "Bionic Chinchilla",
+    "Bionic Unicorn",
+    "Bird",
+    "Bird Flu",
+    "Black Cat",
+    "Black Death",
+    "Black Friday",
+    "Black Hole",
+    "Black Mamba",
+    "Black Widow",
+    "Blacksmith",
+    "Blob",
+    "Blood",
+    "Blood Analyst",
+    "Blood Angel",
+    "Blood Bath",
+    "Blood Bros",
+    "Blood Imp",
+    "Blood Mage",
+    "Blood Moon",
+    "Bloodlust",
+    "Bloody Mary",
+    "Bloody Prom Queen",
+    "Blowfish",
+    "Blue Bull",
+    "Blue Fizz Refresher",
+    "Blue Folk",
+    "Blue Iron",
+    "Blue Knight",
+    "Blue Witch",
+    "Bluebeard",
+    "Bob (Card)",
+    "Bogeyman",
+    "Bolo",
+    "Bomb",
+    "Bomb Shelter",
+    "Bone",
+    "Bone Chin",
+    "Bone Golem",
+    "Bone Hound",
+    "Bone Sword",
+    "Bone Xylophone",
+    "Boneyard",
+    "Book Burner",
+    "Bookworm",
+    "Bouncy Bears",
+    "Bounty Hunter Clone",
+    "Box Special Forces",
+    "Brain Warlord",
+    "Brian (Card)",
+    "Bridget (Card)",
+    "Broham",
+    "Brontosaurus",
+    "Broomstick",
+    "Bubbles",
+    "Building Blocks",
+    "Bumpy Princess",
+    "Burgerlar",
+    "Burgermobile",
+    "Burrowling",
+    "Butterfly",
+    "Cactus Demon",
+    "Camel",
+    "Camouflage",
+    "Candy Hearts",
+    "Candy King Chin",
+    "Candy Nation",
+    "Candy Princess",
+    "Candy Witch",
+    "Cannon Boy",
+    "Car",
+    "Care Chilla",
+    "Carnivorous Pit",
+    "Cartoon",
+    "Castle (Card)",
+    "Cat",
+    "Cat Nap",
+    "Cat and Mouse",
+    "Catapult",
+    "Catfish",
+    "Catron",
+    "Cavalry",
+    "Cave Monkeys",
+    "Caveman",
+    "Caveman Inventor",
+    "Cavities",
+    "Celestial Trees",
+    "Centaur",
+    "Centennial Eagle",
+    "Cerberus",
+    "Ceryneian Hind",
+    "Chameleon",
+    "Changeling",
+    "Chaos Champion",
+    "Chaos Sprite",
+    "Charles (Card)",
+    "Charon",
+    "Charybdis",
+    "Cheetah",
+    "Chemistry Set",
+    "Cheshire Cat",
+    "Chin Cousteau",
+    "Chin Trooper",
+    "Chinchilla",
+    "Chinchilla Knight",
+    "Chinchilla Raider",
+    "Chinchillalope",
+    "Chinzilla",
+    "Chinzombie",
+    "Chiropterang",
+    "Chiroptercar",
+    "Chloe (Card)",
+    "Chocolate Lizards",
+    "Chomp Dude",
+    "Chomp Dude Spirits",
+    "Christmas Tree",
+    "Claws",
+    "Claymore of Doom",
+    "Cleopatra",
+    "Cleric",
+    "Cloud Rider",
+    "Clown",
+    "Clown Car",
+    "Clown Toxin",
+    "Club",
+    "Clyde (Card)",
+    "Cobra",
+    "Cobramon",
+    "Cockatrice",
+    "Cold Hearted",
+    "Colossal Demon",
+    "Commander of Sin",
+    "Computer Bug",
+    "Conan (Card)",
+    "Conch Shell of Doom",
+    "Confectioner Will",
+    "Cookie Beast",
+    "Corrosive Rust",
+    "Courageous Founder",
+    "Court Jester",
+    "Cranky Knight",
+    "Crazy Cat Person",
+    "Crazy Eyed Wizard",
+    "Crazy Pirate King",
+    "Crimson Witch",
+    "Crow Revenant",
+    "Crusader",
+    "Crying Angel",
+    "Cryo Smuggler",
+    "Cryosleep",
+    "Crypt Explorer",
+    "Cthulhu",
+    "Cuckoo",
+    "Cupid",
+    "Cupid's Bow",
+    "Cursed",
+    "Cursed Apple",
+    "Cursed Aztec Prince",
+    "Cursed Flute",
+    "Cursed Garden",
+    "Cursed Monkey Paw",
+    "Cursed Will",
+    "Cute Charm",
+    "Cybernetic Humans",
+    "Cyberwolf",
+    "Cyborg",
+    "Cyborg Alien Mutant",
+    "Cyclone",
+    "Cyclops",
+    "Cymbal Monkey",
+    "D-3000",
+    "Da Vinci Flyer",
+    "Dante (Card)",
+    "Dark Alchemist (Card)",
+    "Dark Angel",
+    "Dark Apprentice",
+    "Dark Elf",
+    "Dark Hero",
+    "Dark Matter",
+    "Dark Sage Master",
+    "Dark Soul Vessels",
+    "Dark Space Lord",
+    "Dark Swan",
+    "Davy Jones",
+    "Death",
+    "Death (Onyx)",
+    "Death Adder Shadow",
+    "Death Metal",
+    "Death Ray",
+    "Death's Gift",
+    "Death's Horse",
+    "Decimation",
+    "Delusional Psychic",
+    "Demon",
+    "Demon (Onyx)",
+    "Demon Hero",
+    "Demon Queen",
+    "Demonic Bike",
+    "Demonic Elf",
+    "Demonic Fighter",
+    "Demonite",
+    "Desert",
+    "Desert Pirate",
+    "Desert Shrew",
+    "Destruction",
+    "Devil",
+    "Diamond Queen",
+    "Diamond Ring",
+    "Diamond Sword",
+    "Dinaggro",
+    "Dino Companion",
+    "Dino Hybrid",
+    "Dino Park",
+    "Dire Bear",
+    "Dire Wolf",
+    "Discipliner",
+    "Disgruntled Beavers",
+    "Divine Healer",
+    "Doc Lobster",
+    "Doctor",
+    "Dog",
+    "Doll",
+    "Doomed Giant",
+    "Doomsday Omen",
+    "Dorian Gray",
+    "Double Rainbow",
+    "Doves",
+    "Dr. Eggdude",
+    "Dr. Frankenstein",
+    "Dr. Jekyll",
+    "Dr. Radiation",
+    "Dr. Robo (Card)",
+    "Dr. Savage",
+    "Dr. What",
+    "Draco (Card)",
+    "Dracula",
+    "Dragon",
+    "Dragon (Onyx)",
+    "Dragon Cannon",
+    "Dragon Fairy",
+    "Dragon Fire",
+    "Dragon Incarnate",
+    "Dragon Mother",
+    "Dragon Princess",
+    "Dragon Rider",
+    "Dragon Turtle",
+    "Dragonfly",
+    "Dragonkin",
+    "Dragonkin Ninja",
+    "Dreidel",
+    "Dress Up Spud",
+    "Driller",
+    "Droid Commander",
+    "Druid",
+    "Dryad",
+    "Dull Jack",
+    "Duncan (Card)",
+    "Dust Bath",
+    "Dwarf",
+    "EZ Cake Oven",
+    "Eagle Hero",
+    "Eagle Rider",
+    "Earth",
+    "Earth (Onyx)",
+    "Earthquake",
+    "Earthworm",
+    "Ed Handytool",
+    "Egyptian Tomb",
+    "Einstein",
+    "Electric Eel",
+    "Elemental Stones",
+    "Elf",
+    "Elf (Onyx)",
+    "Elf Baker",
+    "Elf King",
+    "Elf Servant",
+    "Elf Wizard",
+    "Ella (Card)",
+    "Elmoira (Card)",
+    "Elven Power Elixir",
+    "Ember",
+    "Emberzard",
+    "Emok",
+    "Enchanted Snowman",
+    "Energy",
+    "Energy (Onyx)",
+    "Energy Generator",
+    "Entropic Magic",
+    "Eternal Child",
+    "Eternal Dragon",
+    "Ethyl (Card)",
+    "Evil Queen",
+    "Evil Symbiote",
+    "Evil Vizier",
+    "Excalibur",
+    "Extraterrestrial",
+    "Fair Princess",
+    "Fairy",
+    "Fairy (Onyx)",
+    "Fairy Godmother",
+    "Fairy Godmouse",
+    "Fairy Tale",
+    "Fairy Tale (Onyx)",
+    "Family Reunion",
+    "Farmer",
+    "Fast Food",
+    "Fat Cat",
+    "Fat King",
+    "Fickle Eight Ball",
+    "Fiery Shadow Demon",
+    "Fighting Champion",
+    "Fire",
+    "Fire (Onyx)",
+    "Fire Candy",
+    "Fire Golem",
+    "Fire Lord",
+    "Fire Sigil",
+    "Fire Sprite",
+    "Fireball",
+    "Firebird Force",
+    "Fireblood Dragon",
+    "Firefly",
+    "Firefox",
+    "Firemaster Rooku",
+    "Fireworks",
+    "Fish",
+    "Fish Bone",
+    "Flame Sword",
+    "Flea",
+    "Flight Deck Fairy",
+    "Flint (Card)",
+    "Flip (Card)",
+    "Flood",
+    "Flower Power",
+    "Fluff Puff",
+    "Flux Inventor",
+    "Flying Fish",
+    "Flying Goblin",
+    "Flying Monkey",
+    "Flying Squirrel",
+    "Flying Trooper",
+    "Food",
+    "Food (Onyx)",
+    "Food Chain",
+    "Food Squad",
+    "Forbidden Love",
+    "Forest Chinchillas",
+    "Forest Elf",
+    "Forestfolk",
+    "Fortune Teller",
+    "Fossil",
+    "Fountain of Youth",
+    "Four Eyed Raven",
+    "Francois (Card)",
+    "Frankenstein",
+    "Friendly Dino",
+    "Frog Prince",
+    "Frost Dragon",
+    "Frost Giant",
+    "Frost Mage",
+    "Frost Wolf",
+    "Frostwing",
+    "Fruit Cake",
+    "Fungal Growth",
+    "Furies",
+    "Fused Martial Artists",
+    "Gabriel's Horn",
+    "Gaia",
+    "Galactic Wizard",
+    "Galaxy Wars",
+    "Gale (Card)",
+    "Gargoyle",
+    "Gas Mask Soldier",
+    "Gashadokuro",
+    "Gelmancer",
+    "Gem",
+    "General Viper",
+    "Genie",
+    "Genius and Insane",
+    "Geode",
+    "Geomancer",
+    "Ghost",
+    "Ghost Army",
+    "Ghost Communicator",
+    "Ghost Pirate",
+    "Ghost Trapper",
+    "Giant",
+    "Giant Sword",
+    "Gilded Horse",
+    "Gingerbread Warrior",
+    "Gladiator",
+    "Gladys (Card)",
+    "Gnome",
+    "Gnome Gadgeteer",
+    "Goblin",
+    "Goblin Banker",
+    "Goblin Hybrid",
+    "Goblor (Card)",
+    "God Hammer",
+    "Goddess Pele",
+    "Golden Construct",
+    "Golden Egg Goose",
+    "Golden Harp",
+    "Golden Scarab",
+    "Goldilocks and Bears",
+    "Gorezilla",
+    "Grabbers",
+    "Graham (Card)",
+    "Grasshopper",
+    "Gray Goo",
+    "Great Wall",
+    "Great Wereape",
+    "Greed",
+    "Green Eyed Monster",
+    "Green Knight",
+    "Greg (Card)",
+    "Gremlin",
+    "Griffin",
+    "Grouchy Monster",
+    "Groundhog",
+    "Guardian Angel",
+    "Gummy Bear",
+    "Gummy Duo",
+    "Gummy Worm",
+    "Gunfu Cleric",
+    "Gunslinger",
+    "Gus (Card)",
+    "Gwen (Card)",
+    "Hacker Hero",
+    "Hades",
+    "Hairy Smuggler",
+    "Half-Fairy",
+    "Half-Life",
+    "Half-blood Professor",
+    "Halloween",
+    "Hamlet",
+    "Hammer",
+    "Hammer (Onyx)",
+    "Hammer Sword",
+    "Hammer Time",
+    "Hammerhead Shark",
+    "Hammertron",
+    "Hangry",
+    "Hangry Meal",
+    "Happily Ever After",
+    "Harmony (Card)",
+    "Harpy",
+    "Haunted Armor",
+    "Head Scholar",
+    "Headless Rider",
+    "Healing",
+    "Healthbot Hero",
+    "Healthy Hero",
+    "Heavenly Dog",
+    "Heavens",
+    "Helene (Card)",
+    "Henry (Card)",
+    "Hephaestus",
+    "Hermes",
+    "Hero League",
+    "Hesperide's Tree",
+    "Hey Cat",
+    "Hibernation",
+    "High Tide",
+    "Holiday Lights",
+    "Holidays",
+    "Holy Grail",
+    "Holy Mackerel",
+    "Holy Water",
+    "Holy Water (Onyx)",
+    "Honey Beer",
+    "Horn",
+    "Horn Dagger",
+    "Horn of Life",
+    "Horn of Man",
+    "Horn of Winter",
+    "Horned Serpent",
+    "Horse",
+    "Horse (Onyx)",
+    "Hot Dog",
+    "Hot Pepper",
+    "Hubert (Card)",
+    "Hug-o-Tron",
+    "Hugging Alien",
+    "Human",
+    "Human (Onyx)",
+    "Human Battery",
+    "Hungry Coyote",
+    "Hungry Crocodile",
+    "Hungry Panda Hero",
+    "Hunting Alien",
+    "Hybrid",
+    "Hydra",
+    "Hydrabot",
+    "Hydromancer",
+    "Hypnotic Python",
+    "Hypnotic Singer",
+    "Hypnotist",
+    "Hypnoturtle",
+    "Hypothermia",
+    "Ice",
+    "Ice Age",
+    "Ice Carrier",
+    "Ice Dude",
+    "Ice Golem",
+    "Ice Imp",
+    "Ice King",
+    "Ice Lotus",
+    "Ice Zombie King",
+    "Ifrit",
+    "Igor",
+    "Illusionist",
+    "Immortal",
+    "Immortal One",
+    "Immortality",
+    "Imp",
+    "Indiana Ford",
+    "Inner Demons",
+    "Insanity Wolf",
+    "Insect",
+    "Insect (Onyx)",
+    "Insect Man",
+    "Insidious Emperor",
+    "Invention",
+    "Invention (Onyx)",
+    "Invisible Dude",
+    "Ivana (Card)",
+    "Jack Anger",
+    "Jack and Beanstalk",
+    "Jack the Dog",
+    "Jack-o'-lantern",
+    "Jaeger",
+    "Jama",
+    "Janice (Card)",
+    "Jasper (Card)",
+    "Jem (Card)",
+    "Jester Sidekick",
+    "Jet Fighter",
+    "Jim (Card)",
+    "Jumping Hero",
+    "Jungle",
+    "Jungle Welcoming",
+    "K-9000",
+    "Kappa",
+    "Kate (Card)",
+    "Kid Sidekick",
+    "Killer Plant",
+    "Killer Vegetables",
+    "King",
+    "King Arthur",
+    "King Dodo (Card)",
+    "King Killer",
+    "King Kyle (Card)",
+    "King Midas",
+    "Kite",
+    "Knight",
+    "Knight (Onyx)",
+    "Knowledge",
+    "Knowledge (Onyx)",
+    "Koala",
+    "Kongar",
+    "Koo Koo Nuts",
+    "Kraken",
+    "Kung Fu Master",
+    "Kung Fu Zombie",
+    "Lady Revenant",
+    "Lady of the Lake",
+    "Larry (Card)",
+    "Laser",
+    "Laser Shark",
+    "Laser Sword",
+    "Last Stand",
+    "Laughing Pet Alien",
+    "Lava",
+    "Leader",
+    "Leader (Onyx)",
+    "Leaf Insect",
+    "Learning Rainbow",
+    "Leech",
+    "Legendary Hero",
+    "Leon (Card)",
+    "Leopold (Card)",
+    "Leprechaun",
+    "Lich",
+    "Lich Blade",
+    "Lieutenant USA",
+    "Life",
+    "Life (Onyx)",
+    "Life Shroom",
+    "Lightspeed",
+    "Lil' Android",
+    "Lion",
+    "Lion Prince",
+    "Living Algorithm",
+    "Lizard Bounty Hunter",
+    "Lizard Rider",
+    "Lochness Monster",
+    "Lord of Horses",
+    "Love",
+    "Love Bug",
+    "Love Potion",
+    "Luckymon",
+    "Lucy (Card)",
+    "Luna (Card)",
+    "Lunar Pie",
+    "Lunar Priest",
+    "Lunara",
+    "Lycan King",
+    "MacGryber",
+    "Macho Alien",
+    "Mad Bomber",
+    "Mad Hatter",
+    "Madness",
+    "Maelstrom",
+    "Magic",
+    "Magic (Onyx)",
+    "Magical Soccer",
+    "Magicianbot",
+    "Magicod",
+    "Magnet Dude",
+    "Malevolent",
+    "Mama Bear",
+    "Mama Brain",
+    "Mana Drainer",
+    "Mana Elf",
+    "Mandrake",
+    "Maneaters",
+    "Manticore",
+    "Many Faced Man",
+    "Margarfree",
+    "Martial Arts",
+    "Mask of Mischief",
+    "Masked Killer",
+    "Masked Swordsman",
+    "Master Alchemist",
+    "Master Dueler",
+    "Master Y",
+    "Master's Apprentice",
+    "Mayflower",
+    "Mecha Bear",
+    "Mecha Monkey",
+    "Mechanical Knight",
+    "Medic",
+    "Medieval",
+    "Medusa",
+    "Megalodon",
+    "Menorah",
+    "Meowmon",
+    "Merlin",
+    "Mermaid",
+    "Mermaid Princess",
+    "Merry John",
+    "Messenger Bird",
+    "Metal",
+    "Metal (Onyx)",
+    "Metal Golem",
+    "Meteor",
+    "Meteorite Sword",
+    "Miles (Card)",
+    "Milton (Card)",
+    "Mind Control",
+    "Mind Control Device",
+    "Mind Jewel",
+    "Mind Slug",
+    "Miner",
+    "Minotaur",
+    "Mist Monkey",
+    "Mister Sandman",
+    "Mistletoe",
+    "Momo X",
+    "Monk",
+    "Monkey",
+    "Monkey King",
+    "Monkey Planet",
+    "Monkey Shaman",
+    "Monster",
+    "Monster & Beauty",
+    "Monster (Onyx)",
+    "Monster Collector",
+    "Monster Slayer",
+    "Monster Truck",
+    "Moocher",
+    "Moon",
+    "Moon Buggy",
+    "Moon Goddess",
+    "Moon Golem",
+    "Moon Heroine",
+    "Moon Jellyfish",
+    "Moonflare",
+    "Morgana",
+    "Morning Star",
+    "Morphed Beast",
+    "Mosquito",
+    "Mountain Giant",
+    "Mouse Hero",
+    "Mozart Chin",
+    "Mr. Beetleson",
+    "Mr. Buttons (Card)",
+    "Mr. Clown",
+    "Mr. Moneybags",
+    "Mr. Pimm (Card)",
+    "Mr. Ted",
+    "Mudslide",
+    "Multi Dream",
+    "Multiples",
+    "Multiverse",
+    "Mumbling Kid",
+    "Mummy",
+    "Murder of Crows",
+    "Muse",
+    "Music",
+    "Musical Workers",
+    "Mutant Destroyer",
+    "Mutant Man",
+    "Mutated Fish",
+    "Mutated Rhino",
+    "Mutation",
+    "My Mini Horse",
+    "Myth",
+    "Nadia (Card)",
+    "Naga Queen",
+    "Nanobots",
+    "Nanopower",
+    "Narwhal",
+    "Nearly Limbless Larry",
+    "Necrocomicon",
+    "Necromancer",
+    "Negative Slime",
+    "Nephilim",
+    "Nerdy Wizard",
+    "Nessa (Card)",
+    "Night Children",
+    "Night Dragon",
+    "Night Owl",
+    "Nightmare",
+    "Nightmare Stalker",
+    "Nightshade",
+    "Ninchilla",
+    "Nine Tailed Fox",
+    "Nine Tails Ninja",
+    "Ninja Doge",
+    "Ninja Sorcerer",
+    "Nosferatu Duck",
+    "Nutcracker",
+    "Nymph",
+    "Oasis",
+    "Oberon",
+    "Ocean Defender",
+    "Octopus",
+    "Ogre Princess",
+    "Olive (Card)",
+    "Omni Igniter",
+    "Oozer",
+    "Opera Ghost",
+    "Optic Mutant",
+    "Orpheus",
+    "Other Caroline",
+    "Otto (Card)",
+    "Ouroboros",
+    "Outlandish Royalty",
+    "Outrealm Warlord",
+    "PB & Jelly Time",
+    "Paige (Card)",
+    "Paladin",
+    "Pan",
+    "Panda",
+    "Pandora's Box",
+    "Pantor",
+    "Paradox",
+    "Parasite",
+    "Parasite Hunter",
+    "Parasitic Bioweapon",
+    "Parched Skeleton",
+    "Parrot",
+    "Pastry Cat",
+    "Pebbles (Card)",
+    "Pegasus",
+    "Penguin",
+    "Persephone",
+    "Persian Royalty",
+    "Pestilence",
+    "Pestilence's Horse",
+    "Pet Plant",
+    "Peter (Card)",
+    "Phil (Card)",
+    "Philosopher's Stone",
+    "Phoenix",
+    "Pied Piper",
+    "Pikamon",
+    "Pilgrim",
+    "Pilgrim Chin",
+    "Pinata",
+    "Pinch",
+    "Pink Skull",
+    "Pinocchio",
+    "Pirate Booty",
+    "Pirate Captain",
+    "Pirate Zombie",
+    "Pixie Sugar",
+    "Pixies",
+    "Plague Doctor",
+    "Plague Dragon",
+    "Plague Monstrosity",
+    "Planet",
+    "Planet Commander",
+    "Plant",
+    "Plant Clones",
+    "Plant Dragon",
+    "Plant Fatale",
+    "Plantasaur",
+    "Plasma Sword",
+    "Pocket Pet",
+    "Poison",
+    "Poison (Onyx)",
+    "Poison Cloud",
+    "Poison Dagger",
+    "Poison Dragon",
+    "Poison Oak",
+    "Poisonous Porcupine",
+    "Poisonous Prince",
+    "Polar Bear",
+    "Polaris Knuckles",
+    "Pony Princess",
+    "Poseidon",
+    "Posession",
+    "Praying Mantis",
+    "Precious Ring",
+    "Precious Ring Bearer",
+    "Precious Ring Lore",
+    "Prehistoric",
+    "Prehistoric (Onyx)",
+    "Primeval Turtle",
+    "Prince Charming",
+    "Princess",
+    "Professor Beagle",
+    "Professor Pine",
+    "Professor Werewolf",
+    "Professor Y",
+    "Prometheus",
+    "Prophecy Wizard",
+    "Psychic",
+    "Psychic Assassin",
+    "Psychic Clone",
+    "Psychic Elementalist",
+    "Psychotic Clown",
+    "Pterodactyl",
+    "Puff",
+    "Puff Hero",
+    "Pumpkin Carriage",
+    "Pumpkin Prince",
+    "Punchy",
+    "Pup",
+    "Puppy Love",
+    "Puzzle Master",
+    "Pyromancer",
+    "Quack Doctor",
+    "Quadforce",
+    "Quicksand",
+    "Quinn (Card)",
+    "Rabbit Hole",
+    "Raccoon Guardian",
+    "Racing Tortoise",
+    "Radiation",
+    "Radiation (Onyx)",
+    "Radiation Sickness",
+    "Radioactive Avenger",
+    "Raging Bird",
+    "Raging Gamer",
+    "Raina (Card)",
+    "Rainbow",
+    "Rainbow Candy",
+    "Rainbow Girl",
+    "Ram Hammer",
+    "Raptorbot",
+    "Rat Chef",
+    "Rat Reaper",
+    "Ratatoskr",
+    "Rattlesnake",
+    "Ravenica",
+    "Red Knight",
+    "Red Violin",
+    "Relic",
+    "Reptile",
+    "Reptilian Ninja",
+    "Rex's Lab",
+    "Rhinocerous Beetle",
+    "Ring Lord",
+    "Rip Van Winkle",
+    "Road Rage",
+    "Road Sprinter",
+    "Robert Sponge",
+    "Robin Hood",
+    "Robo Ninja",
+    "Robot",
+    "Robot Devil",
+    "Robotic Toy",
+    "Rock Dragon",
+    "Rock Slide",
+    "Rodent",
+    "Royal Game",
+    "Rudolph",
+    "Rumpelstiltskin",
+    "Saberchilla",
+    "Sabertooth Cat",
+    "Sai",
+    "Samurai Hero",
+    "Sand Raider",
+    "Sand Warrior",
+    "Sandman",
+    "Sandstorm",
+    "Sandy (Card)",
+    "Santa Claus",
+    "Santa's Helper",
+    "Sarcastic Hero",
+    "Scarecrow",
+    "Scholar",
+    "Sci-Fi",
+    "Sci-Fi (Onyx)",
+    "Science",
+    "Science (Onyx)",
+    "Scorpion Lord",
+    "Scylla",
+    "Scythe",
+    "Sea Dog",
+    "Sea Giant",
+    "Sea Monkey",
+    "Sea Witch",
+    "Seahorse",
+    "Seal",
+    "Secret Passage",
+    "Segmentipede",
+    "Sekhmet",
+    "Sensei Rat",
+    "Seraphim",
+    "Sergeant Arnold",
+    "Serpent Cultist",
+    "Sewer Mutants",
+    "Shade Kitten",
+    "Shadow People",
+    "Shadow Prelate",
+    "Shadow Prophet",
+    "Shapeshifter",
+    "Shapeshifting Chief",
+    "Shark Rider",
+    "Sharkstorm",
+    "Shattered Sword",
+    "Shifting Mutant",
+    "Shoggoth",
+    "Shrunken Head",
+    "Siberian Husky",
+    "Sidekick",
+    "Silver Bullet",
+    "Singing Raisins",
+    "Sinister Gourdling",
+    "Siphoning Belle",
+    "Sir Lancelot",
+    "Siren",
+    "Skeletal Dragon",
+    "Skeletal Horse",
+    "Skeletal Isle",
+    "Skeletal Mage",
+    "Skeletal Vampire",
+    "Skeletal Worm",
+    "Skeleton Overlord",
+    "Skull Smasher",
+    "Sledge Hammer",
+    "Sleep",
+    "Sleeping Princess",
+    "Sleepwalker",
+    "Sleigh",
+    "Sleipnir",
+    "Slime Warrior",
+    "Slithers (Card)",
+    "Smog Horror",
+    "Smoke Screen",
+    "Smug",
+    "Snake",
+    "Snake (Onyx)",
+    "Snake Charmer",
+    "Snake Oil Salesman",
+    "Snakes in a Can",
+    "Snakes on a Jet",
+    "Snapping Turtle",
+    "Sniper",
+    "Sno-Cone",
+    "Snoring Monster",
+    "Snow Angel",
+    "Snowflake",
+    "Snowman",
+    "Sonic Bat",
+    "Soul Harvester",
+    "Soul Stealer",
+    "Soy Yum Green",
+    "Space",
+    "Space (Onyx)",
+    "Space Admiral",
+    "Space Dog",
+    "Space Elf",
+    "Space Explorer",
+    "Space Ghosts",
+    "Space Guardian",
+    "Space Moth",
+    "Space Shoes",
+    "Space Zombie",
+    "Spaceship",
+    "Sparkling Vampire",
+    "Specter",
+    "Spectral Dragon",
+    "Spectral Rider",
+    "Spectre Ninja",
+    "Speed",
+    "Speed Demon",
+    "Spencer (Card)",
+    "Sphinx",
+    "Spider Mine",
+    "Spirit",
+    "Spirit (Onyx)",
+    "Spirit Bear",
+    "Spirit Wolf",
+    "Spooky Tree",
+    "Spork of Doom",
+    "Squeeze Toy Alien",
+    "Squirt Gun",
+    "Static Beast",
+    "Stealth Bomber",
+    "Steam",
+    "Steel Hero",
+    "Stewart (Card)",
+    "Stinger",
+    "Stingray",
+    "Stockbroker Wolf",
+    "Stonemobile",
+    "Stonescale",
+    "Stormcat",
+    "Strength (Onyx)",
+    "Stuffed Plushie",
+    "Stymphalian Bird",
+    "Submarine",
+    "Sugar Demon",
+    "Sugar Skull",
+    "Sun",
+    "Sun (Onyx)",
+    "Sun Burn",
+    "Sunflower",
+    "Sunny (Card)",
+    "Sunwalker Vampire",
+    "Super Bat",
+    "Super Martial Artist",
+    "Super Nova",
+    "Superhero",
+    "Superhero (Onyx)",
+    "Superpowered Girls",
+    "Surfer Dude",
+    "Swamp Monster",
+    "Swarm Queen",
+    "Sweets",
+    "Swift the Chin",
+    "Sword",
+    "Sword Prince",
+    "Swordfish",
+    "Tale of Hot & Cold",
+    "Talos",
+    "Tank",
+    "Tarrasque",
+    "Tawn Tawn",
+    "Teleporting Acrobat",
+    "Tempest",
+    "Tentacled Beast",
+    "Terracotta Army",
+    "Terrance (Card)",
+    "Terror Bird",
+    "The Awakener",
+    "The Badger",
+    "The Boy Wizard",
+    "The Brown Druid",
+    "The Chosen One",
+    "The Cursed Chosen",
+    "The Dash",
+    "The Deranged King",
+    "The Good Giant",
+    "The Grater",
+    "The Huntsman",
+    "The Incinerator",
+    "The Lone Wolf",
+    "The Magic Dresser",
+    "The Magician",
+    "The Mariner",
+    "The Mole King",
+    "The Ooze",
+    "The Ranger",
+    "The Reaper",
+    "The Ring Courier",
+    "The Snake Lord",
+    "The Talking Cricket",
+    "The World Tree",
+    "Theodore (Card)",
+    "Thomas Edison",
+    "Thor",
+    "Thor's Hammer",
+    "Three Wise Monkeys",
+    "Thrilling Zombie",
+    "Thunder God",
+    "Thunderbird",
+    "Time",
+    "Time (Onyx)",
+    "Time Adventurers",
+    "Time Fairy",
+    "Time Machine",
+    "Tin Man",
+    "Tinfoil Hat",
+    "Titan of Death",
+    "Tomb Keeper",
+    "Tombstone",
+    "Tongue Parasite",
+    "Tooth Fairy",
+    "Toximo 3000 (Card)",
+    "Toy",
+    "Toy (Onyx)",
+    "Tranquilizer Dart",
+    "Transformobot",
+    "Transmutation",
+    "Trapper-1",
+    "Treacherous Wizard",
+    "Treant",
+    "Tree",
+    "Tree (Onyx)",
+    "Triceratops",
+    "Trick or Treater",
+    "Trident",
+    "Trident (Onyx)",
+    "Trojan Horse",
+    "Troll",
+    "True Love's Kiss",
+    "Turkey",
+    "Turkeyzilla",
+    "Turtle",
+    "Turtle Drummer",
+    "Turtle Duck",
+    "Turtle Golem",
+    "Turtle King",
+    "Turtle Sorcerer",
+    "Turtle Warrior",
+    "USB of 999 Truths",
+    "Ubaid Lizardman",
+    "Ultimate Soldier",
+    "Ultra Dude",
+    "Uncle Duck",
+    "Undead",
+    "Undead (Onyx)",
+    "Undead Bride",
+    "Undead Knight",
+    "Undead Slime",
+    "Underground",
+    "Underground City",
+    "Underwater",
+    "Unicorn",
+    "Unicorn Blood",
+    "Uther (Card)",
+    "Vamp Crunch",
+    "Vampchilla",
+    "Vampire",
+    "Vampire (Onyx)",
+    "Vampire Assassin",
+    "Vampire Boogie Man",
+    "Vampire Coven",
+    "Vampire Hunter",
+    "Vampire Killer",
+    "Vampire Knight",
+    "Vampire Queen",
+    "Vampire Squid",
+    "Vampiric Gargoyle",
+    "Vegas Magicians",
+    "Vehicle",
+    "Vengeful Spirit",
+    "Vera (Card)",
+    "Vial of Stars",
+    "Video Game",
+    "Villain",
+    "Villain (Onyx)",
+    "Villain Groupies",
+    "Viral Agent",
+    "Virus",
+    "Vlad (Card)",
+    "Void",
+    "Void (Onyx)",
+    "Void Fiend",
+    "Void Horror",
+    "Void Shaman",
+    "Voidwalker",
+    "Voodoo Doll",
+    "Vulture",
+    "W Space Fighter",
+    "WMD",
+    "War",
+    "War Bear",
+    "War Drummer",
+    "War God",
+    "War Turtle",
+    "War's Horse",
+    "Warlock",
+    "Wasp",
+    "Water",
+    "Water (Onyx)",
+    "Water Dragon",
+    "Water Serpent",
+    "Water Serpent (Onyx)",
+    "Water Sprite",
+    "Watermaster Cora",
+    "Watson",
+    "Wealth",
+    "Weapon",
+    "Werebear",
+    "Werechicken",
+    "Werevamp",
+    "Werewolf",
+    "Werewolf (Onyx)",
+    "White Rabbit",
+    "Wight",
+    "Wildfire",
+    "Wind",
+    "Wind (Onyx)",
+    "Wind Giant",
+    "Wind Princess",
+    "Windmaster Eng",
+    "Windmill of Doom",
+    "Wings",
+    "Wings (Onyx)",
+    "Winter Assassin",
+    "Wise Owl",
+    "Wisp",
+    "Witch",
+    "Witch Doctor",
+    "Witch's Brew",
+    "Wiz's Apprentice",
+    "Wizard",
+    "Wizard (Onyx)",
+    "Wizard Giant",
+    "Wizard Headmaster",
+    "Wizard Staff",
+    "Wizarding School",
+    "Wolf",
+    "Wolf (Onyx)",
+    "Wolf Battering Ram",
+    "Wolf Warrior",
+    "Wolf in Sheep Duds",
+    "Wolfpack",
+    "Wonderful Chin",
+    "Wooden Golem",
+    "World Eater",
+    "World Turtle",
+    "Wormhole",
+    "Worship Stones",
+    "Wraith",
+    "Wraith Dagger",
+    "Wyvern",
+    "X-Ray",
+    "Xanthar (Card)",
+    "Xenomorph",
+    "Young Wolf",
+    "Youthful Sorceress",
+    "Zantar",
+    "Zeus",
+    "Ziz",
+    "Zombie Bear",
+    "Zombie Chipmunk",
+    "Zombie Fungus",
+    "Zombie Giant",
+    "Zombie Hunter",
+    "Zombie Outbreak",
+    "Zombie Romeo",
+    "Zombiesaur",
+    "Zugzug (Card)",
+    "Shrine",
+    "The Chosen One (Onyx)",
+    "Sakura Spirits",
+    "Evomon",
+    "Ancient Technology",
+    "Veined Castle",
+    "Majestic Miko",
+    "Amaterasu",
+    "Shrinemasons",
+    "Stone Effigy",
+    "Festival Feast",
+    "Wishing Mallet",
+    "Doom Temple",
+    "Magpyre Maiden",
+    "Darkness",
+    "Viral Dance",
+    "Eye Eater",
+    "Fungi King",
+    "Mothman",
+    "Eyed Feet Man",
+    "Wi-Fi Psychic",
+    "Puzzle Cube Head",
+    "Strange Communicator",
+    "Haunted Doll",
+    "Chilling Brina",
+    "The Dadabook",
+    "Killer Clown",
+    "Devil's Boy",
+    "Madness (Onyx)",
+    "Turkey Day",
+    "Carver of Doom",
+    "Harvest",
+    "Plymouth Rock",
+    "Robot Turkey",
+    "Turkey Zombie",
+    "Arcane Golem",
+    "Golem (Onyx)",
+    "Sweets (Onyx)",
+    "Celebration",
+    "Alchemical Graduate",
+    "Everything is Cake",
+    "Mecha Chinzilla",
+    "Mr. Pimm's Wild Ride",
+    "Party Animal Albert",
+    "Puffin' Leopold",
+    "Vamping Vera",
+    "Anna-versary",
+    "Ella-gant Ball",
+    "Moshing Miles",
+    "Rampant Lucy",
+    "Sniping Queen",
+    "Xanthar the Exultant",
+    "Golem",
+    "Angel (Onyx)",
+    "Strength",
+    "Sword (Onyx)",
+    "Elf Warrior",
+    "Immovable Object",
+    "Titan of Destruction",
+    "Mantis Shrimp",
+    "Barbarian",
+    "Unstoppable Force",
+    "Steamroller",
+    "Void Beast",
+    "Valkyrie",
+    "Zombie Tank",
+    "Yeti",
+    "Amazing Dog",
+    "Hercules",
+    "Magic Carpet",
+    "Miniature",
+    "Microraptor",
+    "Bonsai",
+    "Flapjack Octopus",
+    "White Dwarf",
+    "Water Bear",
+    "Mini Clone",
+    "Pygmy Jerboa",
+    "Conscience",
+    "Power Nap",
+    "Bumblebee Bat",
+    "Thumbelina",
+    "Protozoan Villain",
+    "Spider Mite",
+    "Rainbow (Onyx)",
+    "Holidays (Onyx)",
+    "Wintertide",
+    "Christmas Spirits",
+    "Chudolph the Braindeer",
+    "Fairy Light Festival",
+    "Holiday Blockbuster",
+    "Krampus",
+    "Ornamental Pickle",
+    "Stone Hearth",
+    "Cute Carolers",
+    "Festive Coral",
+    "Gelt",
+    "Gifted Birds",
+    "Ice Explorers",
+    "Tinselwebs",
+    "Chinchilla (Onyx)",
+    "Royalty",
+    "The Bone King",
+    "Northern King",
+    "Queen of Hearts",
+    "Rebel Space Princess",
+    "Panther Hero",
+    "Robot King",
+    "Queen Bee",
+    "The Musical Symbol",
+    "Mermaid King",
+    "Asteroid Prince",
+    "Cinderella",
+    "Ice Queen",
+    "Rapunzel",
+]
