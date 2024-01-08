@@ -484,6 +484,11 @@ class Scraper:
             )
             for combo in combos:
                 session.delete(combo)
+            # delete all existing card levels
+            card_levels = session.query(CardLevelStats).filter_by(card_id=card.id)
+            for card_level in card_levels:
+                session.delete(card_level)
+
             session.commit()
         else:
             print(f"Card {name} not in database, adding...")
