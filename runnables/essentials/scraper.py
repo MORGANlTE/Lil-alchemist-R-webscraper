@@ -422,17 +422,22 @@ class Scraper:
         resp = requests.get(url)
         soup = BeautifulSoup(resp.content, "html.parser")
         # print(soup)
+        cardnames = []
+        try:
+            div1 = soup.find_all("div", id="gallery-0")[0]
+        except:
+            return "Not found"
 
-        table = soup.find_all("table", class_="pi-horizontal-group")[0]
-
-        cost = table.find("td", {"data-source": "cost"}).get_text(strip=True)
-        print(cost)
 
         gallery = soup.find("div", id="gallery-0")
-        cardnames = []
-        cards = gallery.find_all("div", class_="lightbox-caption")
+        cards = gallery.find_all("a", class_="image link-internal")
         for card in cards:
-            cardnames.append(card.text.strip())
+            cardnames.append(card.get("href").replace("/wiki/", "").strip().replace("_", " "))
+
+        gallery = soup.find("div", id="gallery-1")
+        cards = gallery.find_all("a", class_="image link-internal")
+        for card in cards:
+            cardnames.append(card.get("href").replace("/wiki/", "").strip().replace("_", " "))
 
         onyx_fragments_caption = soup.find(
             "div", class_="lightbox-caption", text="Onyx Fragments"
@@ -445,7 +450,7 @@ class Scraper:
 
         cardpack = CardPack(
             name=pack_name,
-            price=cost,
+            price=0,
             cards=json.dumps(cardnames),
             onyx_fragments=onyx,
         )
